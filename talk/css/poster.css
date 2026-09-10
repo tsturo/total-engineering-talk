@@ -383,3 +383,21 @@ body.impress-mouse-timeout {
 }
 
 .minicard.on .radar .shape { transform: scale(1); }
+
+.stamp {
+  padding: 18px 40px;
+  border: 14px solid rgba(193, 39, 45, 0.85);
+  border-radius: 14px;
+  color: rgba(193, 39, 45, 0.85);
+  font-family: var(--font-display);
+  font-size: 150px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(-14deg);
+  transition: opacity 0.12s ease, transform 0.25s cubic-bezier(0.2, 1.6, 0.4, 1);
+}
+
+.stamp:not(.on) {
+  transform: rotate(-14deg) scale(1.6);
+}
