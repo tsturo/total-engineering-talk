@@ -440,3 +440,41 @@ body.impress-mouse-timeout {
 #poster.on-ai-boost .minicard.on .radar .shape.ai {
   transform: scale(1);
 }
+
+.minicard .value { position: relative; }
+
+.minicard .value .now {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #B8860B;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.9s;
+}
+
+.minicard .value .was {
+  display: inline-block;
+  transition: opacity 0.4s ease 0.9s, transform 0.4s ease 0.9s;
+}
+
+#poster.on-ai-boost .minicard .value .now { opacity: 1; }
+#poster.on-ai-boost .minicard .value .was { opacity: 0; }
+
+.minicard .ai-badge {
+  position: absolute;
+  right: -30px;
+  top: -34px;
+  padding: 10px 26px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #E8B923, #F6D35B);
+  color: #3a2a00;
+  font-family: var(--font-display);
+  font-size: 34px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  transform: rotate(6deg) scale(0);
+  transition: transform 0.4s cubic-bezier(0.2, 1.6, 0.4, 1) 0.6s;
+}
+
+#poster.on-ai-boost .minicard .ai-badge { transform: rotate(6deg) scale(1); }
