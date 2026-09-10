@@ -47,28 +47,28 @@
 <filter id="disc-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/></filter>
 </defs>
 <g id="bands">
-<g data-obj="band-fe" class="band">
+<g data-obj="band-devops" class="band">
 <rect x="155.0" y="151" width="923.0" height="1917" fill="#F4F1E8" fill-opacity="0.10"/>
 <rect x="454.5" y="188" width="324" height="120" rx="9" fill="#151515" fill-opacity="0.88"/>
-<text x="616.5" y="276" class="tag">FE</text>
+<text x="616.5" y="276" class="tag">DevOps</text>
 </g>
-<g data-obj="band-be" class="band">
+<g data-obj="band-qa" class="band">
 <rect x="1078.0" y="151" width="923.0" height="1917" fill="#151515" fill-opacity="0.16"/>
 <line x1="1078.0" y1="151" x2="1078.0" y2="2068" class="divider"/>
 <rect x="1377.5" y="188" width="324" height="120" rx="9" fill="#151515" fill-opacity="0.88"/>
-<text x="1539.5" y="276" class="tag">BE</text>
+<text x="1539.5" y="276" class="tag">QA</text>
 </g>
-<g data-obj="band-qa" class="band">
+<g data-obj="band-be" class="band">
 <rect x="2001.0" y="151" width="923.0" height="1917" fill="#F4F1E8" fill-opacity="0.10"/>
 <line x1="2001.0" y1="151" x2="2001.0" y2="2068" class="divider"/>
 <rect x="2300.5" y="188" width="324" height="120" rx="9" fill="#151515" fill-opacity="0.88"/>
-<text x="2462.5" y="276" class="tag">QA</text>
+<text x="2462.5" y="276" class="tag">BE</text>
 </g>
-<g data-obj="band-devops" class="band">
+<g data-obj="band-fe" class="band">
 <rect x="2924.0" y="151" width="923.0" height="1917" fill="#151515" fill-opacity="0.16"/>
 <line x1="2924.0" y1="151" x2="2924.0" y2="2068" class="divider"/>
 <rect x="3223.5" y="188" width="324" height="120" rx="9" fill="#151515" fill-opacity="0.88"/>
-<text x="3385.5" y="276" class="tag">DevOps</text>
+<text x="3385.5" y="276" class="tag">FE</text>
 </g>
 </g>
 <g id="trails">
@@ -216,6 +216,13 @@
 <span data-obj="ball-w1" data-mirror="ballg" hidden></span>
 <span data-obj="ball-w2" data-mirror="ballg" hidden></span>
 <span data-obj="ball-w3" data-mirror="ballg" hidden></span>
+<span data-obj="ticket-at-be" data-mirror="ticketg" hidden></span>
+<span data-obj="ticket-at-qa" data-mirror="ticketg" hidden></span>
+<span data-obj="ticket-at-ops" data-mirror="ticketg" hidden></span>
+<span data-obj="ticket-at-done" data-mirror="ticketg" hidden></span>
+<span data-obj="eng-mark-fe" data-mirror="engs" hidden></span>
+<span data-obj="eng-move-fe" data-mirror="engs" hidden></span>
+<span data-obj="eng-mark-be" data-mirror="engs" hidden></span>
 <!-- pitch:end -->
 
     <img class="place figure" data-obj="fig1" src="img/player1.png" alt="" style="left: 1642px; top: 1522px; width: 540px;">
@@ -270,6 +277,99 @@
         <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,91.6 121.8,87.4 143.6,125.2 100.0,179.0 36.0,137.0 49.1,70.6"/></svg>
       </div>
     </div>
+    <div class="place hand poslabel" data-obj="poslabel1" style="left: 1612px; top: 2222px; width: 600px;">Goalkeeper</div>
+    <div class="place hand poslabel" data-obj="poslabel2" style="left: 2469px; top: 2222px; width: 600px;">Defender</div>
+    <div class="place hand poslabel" data-obj="poslabel3" style="left: 3349px; top: 2222px; width: 600px;">Midfielder</div>
+    <div class="place hand poslabel" data-obj="poslabel4" style="left: 4276px; top: 2222px; width: 600px;">Striker</div>
+    <img class="place figure" data-obj="fig5" src="img/player5.png" alt="" style="left: 3171px; top: 1522px; width: 600px;">
+    <div class="place card" data-obj="card5" style="left: 3831px; top: 1552px; width: 1260px; transform: rotate(-1.5deg);">
+      <div class="card-body">
+        <div class="card-title"><span class="hand">Total footballer</span><span class="pos">ALL</span></div>
+        <div class="stat"><span class="label">Goalkeeping</span><span class="bar"><span class="fill hi" style="--v: 88%"></span></span><span class="value">88</span></div>
+        <div class="stat"><span class="label">Defending</span><span class="bar"><span class="fill hi" style="--v: 90%"></span></span><span class="value">90</span></div>
+        <div class="stat"><span class="label">Passing</span><span class="bar"><span class="fill hi" style="--v: 92%"></span></span><span class="value">92</span></div>
+        <div class="stat"><span class="label">Attacking</span><span class="bar"><span class="fill hi" style="--v: 91%"></span></span><span class="value">91</span></div>
+        <div class="stat"><span class="label">Pace</span><span class="bar"><span class="fill hi" style="--v: 89%"></span></span><span class="value">89</span></div>
+        <div class="stat"><span class="label">Stamina</span><span class="bar"><span class="fill hi" style="--v: 93%"></span></span><span class="value">93</span></div>
+        <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,26.1 165.5,62.2 166.9,138.6 100.0,176.4 35.3,137.4 32.3,60.9"/></svg>
+      </div>
+    </div>
+    <div id="engs" class="place" style="left: 0; top: 0; width: 0; height: 0; overflow: visible;">
+    <img class="place figure" data-obj="eng1" src="img/player1.png" alt="" style="left: 1642px; top: 1612px; width: 540px;">
+    <div class="place hand poslabel" data-obj="englabel1" style="left: 1612px; top: 2222px; width: 600px;">DevOps</div>
+    <div class="place card" data-obj="engcard1" style="left: 2212px; top: 1552px; width: 1260px; transform: rotate(-1.5deg);">
+      <div class="card-body">
+        <div class="card-title"><span class="hand">DevOps</span><span class="pos">OPS</span></div>
+        <div class="stat"><span class="label">Frontend</span><span class="bar"><span class="fill lo" style="--v: 20%"></span></span><span class="value">20</span></div>
+        <div class="stat"><span class="label">Backend</span><span class="bar"><span class="fill mid" style="--v: 45%"></span></span><span class="value">45</span></div>
+        <div class="stat"><span class="label">Testing</span><span class="bar"><span class="fill mid" style="--v: 50%"></span></span><span class="value">50</span></div>
+        <div class="stat"><span class="label">Operations</span><span class="bar"><span class="fill hi" style="--v: 94%"></span></span><span class="value">94</span></div>
+        <div class="stat"><span class="label">Communication</span><span class="bar"><span class="fill mid" style="--v: 60%"></span></span><span class="value">60</span></div>
+        <div class="stat"><span class="label">Judgment</span><span class="bar"><span class="fill hi" style="--v: 75%"></span></span><span class="value">75</span></div>
+        <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,83.2 132.7,81.1 136.4,121.0 100.0,179.0 56.4,125.2 45.4,68.5"/></svg>
+      </div>
+    </div>
+    <img class="place figure" data-obj="eng2" src="img/player2.png" alt="" style="left: 2499px; top: 1612px; width: 540px;">
+    <div class="place hand poslabel" data-obj="englabel2" style="left: 2469px; top: 2222px; width: 600px;">QA</div>
+    <div class="place card" data-obj="engcard2" style="left: 3069px; top: 1552px; width: 1260px; transform: rotate(1.5deg);">
+      <div class="card-body">
+        <div class="card-title"><span class="hand">QA</span><span class="pos">QA</span></div>
+        <div class="stat"><span class="label">Frontend</span><span class="bar"><span class="fill lo" style="--v: 40%"></span></span><span class="value">40</span></div>
+        <div class="stat"><span class="label">Backend</span><span class="bar"><span class="fill lo" style="--v: 35%"></span></span><span class="value">35</span></div>
+        <div class="stat"><span class="label">Testing</span><span class="bar"><span class="fill hi" style="--v: 92%"></span></span><span class="value">92</span></div>
+        <div class="stat"><span class="label">Operations</span><span class="bar"><span class="fill mid" style="--v: 45%"></span></span><span class="value">45</span></div>
+        <div class="stat"><span class="label">Communication</span><span class="bar"><span class="fill hi" style="--v: 70%"></span></span><span class="value">70</span></div>
+        <div class="stat"><span class="label">Judgment</span><span class="bar"><span class="fill hi" style="--v: 85%"></span></span><span class="value">85</span></div>
+        <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,66.4 125.5,85.3 166.9,138.6 100.0,137.8 49.1,129.4 38.2,64.3"/></svg>
+      </div>
+    </div>
+    <img class="place figure" data-obj="eng3" src="img/player3.png" alt="" style="left: 3379px; top: 1612px; width: 540px;">
+    <div class="place hand poslabel" data-obj="englabel3" style="left: 3349px; top: 2222px; width: 600px;">Backend</div>
+    <div class="place card" data-obj="engcard3" style="left: 3949px; top: 1552px; width: 1260px; transform: rotate(-1.5deg);">
+      <div class="card-body">
+        <div class="card-title"><span class="hand">Backend</span><span class="pos">BE</span></div>
+        <div class="stat"><span class="label">Frontend</span><span class="bar"><span class="fill lo" style="--v: 35%"></span></span><span class="value">35</span></div>
+        <div class="stat"><span class="label">Backend</span><span class="bar"><span class="fill hi" style="--v: 92%"></span></span><span class="value">92</span></div>
+        <div class="stat"><span class="label">Testing</span><span class="bar"><span class="fill mid" style="--v: 60%"></span></span><span class="value">60</span></div>
+        <div class="stat"><span class="label">Operations</span><span class="bar"><span class="fill mid" style="--v: 55%"></span></span><span class="value">55</span></div>
+        <div class="stat"><span class="label">Communication</span><span class="bar"><span class="fill mid" style="--v: 65%"></span></span><span class="value">65</span></div>
+        <div class="stat"><span class="label">Judgment</span><span class="bar"><span class="fill hi" style="--v: 80%"></span></span><span class="value">80</span></div>
+        <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,70.6 166.9,61.4 143.6,125.2 100.0,146.2 52.7,127.3 41.8,66.4"/></svg>
+      </div>
+    </div>
+    <img class="place figure" data-obj="eng4" src="img/player4.png" alt="" style="left: 4306px; top: 1612px; width: 540px;">
+    <div class="place hand poslabel" data-obj="englabel4" style="left: 4276px; top: 2222px; width: 600px;">Frontend</div>
+    <div class="place card" data-obj="engcard4" style="left: 3016px; top: 1552px; width: 1260px; transform: rotate(1.5deg);">
+      <div class="card-body">
+        <div class="card-title"><span class="hand">Frontend</span><span class="pos">FE</span></div>
+        <div class="stat"><span class="label">Frontend</span><span class="bar"><span class="fill hi" style="--v: 94%"></span></span><span class="value">94</span></div>
+        <div class="stat"><span class="label">Backend</span><span class="bar"><span class="fill lo" style="--v: 30%"></span></span><span class="value">30</span></div>
+        <div class="stat"><span class="label">Testing</span><span class="bar"><span class="fill mid" style="--v: 50%"></span></span><span class="value">50</span></div>
+        <div class="stat"><span class="label">Operations</span><span class="bar"><span class="fill lo" style="--v: 20%"></span></span><span class="value">20</span></div>
+        <div class="stat"><span class="label">Communication</span><span class="bar"><span class="fill hi" style="--v: 80%"></span></span><span class="value">80</span></div>
+        <div class="stat"><span class="label">Judgment</span><span class="bar"><span class="fill hi" style="--v: 70%"></span></span><span class="value">70</span></div>
+        <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,21.0 121.8,87.4 136.4,121.0 100.0,116.8 41.8,133.6 49.1,70.6"/></svg>
+      </div>
+    </div>
+    </div>
+    <div id="ticketg" class="place ticket" data-obj="ticket" style="--hx: 4993px; --hy: 2265px;">
+      <span class="key">ENG-142</span>
+      <span class="ticket-title">Export as PDF</span>
+      <span class="status" data-obj="ticket-status"></span>
+    </div>
+    <img class="place figure" data-obj="eng5" src="img/player5.png" alt="" style="left: 3171px; top: 1522px; width: 600px;">
+    <div class="place card" data-obj="engcard5" style="left: 3831px; top: 1552px; width: 1260px; transform: rotate(-1.5deg);">
+      <div class="card-body">
+        <div class="card-title"><span class="hand">Total engineer</span><span class="pos">ALL</span></div>
+        <div class="stat"><span class="label">Frontend</span><span class="bar"><span class="fill hi" style="--v: 88%"></span></span><span class="value">88</span></div>
+        <div class="stat"><span class="label">Backend</span><span class="bar"><span class="fill hi" style="--v: 90%"></span></span><span class="value">90</span></div>
+        <div class="stat"><span class="label">Testing</span><span class="bar"><span class="fill hi" style="--v: 92%"></span></span><span class="value">92</span></div>
+        <div class="stat"><span class="label">Operations</span><span class="bar"><span class="fill hi" style="--v: 89%"></span></span><span class="value">89</span></div>
+        <div class="stat"><span class="label">Communication</span><span class="bar"><span class="fill hi" style="--v: 91%"></span></span><span class="value">91</span></div>
+        <div class="stat"><span class="label">Judgment</span><span class="bar"><span class="fill hi" style="--v: 93%"></span></span><span class="value">93</span></div>
+        <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,26.1 165.5,62.2 166.9,138.6 100.0,174.8 33.8,138.2 32.3,60.9"/></svg>
+      </div>
+    </div>
   </div>
 
   <div id="s00-title" class="step" data-x="400" data-y="-1420" data-scale="1.9" data-scene="title photo1974 credits" data-target="0:15">
@@ -319,6 +419,55 @@
 
   <div id="s09-p4" class="step" data-x="431" data-y="-58" data-scale="1.2" data-scene="title xp-print pascal-print pitch photo1974 fig4 card4" data-target="1:00">
     <div class="notes">The striker. One job, done brilliantly. Fast, clinical, and not much use at the back. Every team needs one, and nobody asks him to keep goal.</div>
+  </div>
+
+  <div id="s10-four-named" class="step" data-x="0" data-y="-10" data-scale="2.1" data-scene="title xp-print pascal-print pitch photo1974 fig1 fig2 fig3 fig4 poslabel1 poslabel2 poslabel3 poslabel4" data-target="0:45">
+    <div class="notes">Four positions, four profiles. Each one is excellent at something and weak at something else, and the team works because the shapes fit together. Hold this for a moment.</div>
+  </div>
+
+  <div id="s11-ultra" class="step" data-x="631" data-y="-58" data-scale="1.25" data-scene="title xp-print pascal-print pitch photo1974 fig5 card5" data-target="1:30">
+    <div class="notes">Now imagine one player who could do all of it. Keep goal, defend, pass, score, run all day. This is what Michels asked of every player in 1974: not to be the best at one thing, but to be able to take any position when the game needed it. That is the total footballer. Keep this shape in mind. We are about to draw it for an engineer.</div>
+  </div>
+
+  <div id="s12-ticket" class="step" data-x="0" data-y="-10" data-scale="2.1" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4" data-target="0:45">
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status"></div>
+    <div class="notes">Now our pitch. Four people, four home positions: DevOps, QA, Backend, Frontend. The profiles rhyme with the players you just saw, and you will see why in a moment. And the ball is now a ticket.</div>
+  </div>
+
+  <div id="s13-eng1" class="step" data-x="-943" data-y="-58" data-scale="1.2" data-scene="title xp-print pascal-print pitch photo1974 eng1 engcard1" data-target="0:45">
+    <div class="notes">DevOps. Nobody notices him until something is down, and he is the only one allowed to use his hands in production. Operations off the chart, frontend barely on it.</div>
+  </div>
+
+  <div id="s14-eng2" class="step" data-x="-86" data-y="-58" data-scale="1.2" data-scene="title xp-print pascal-print pitch photo1974 eng2 engcard2" data-target="0:45">
+    <div class="notes">QA. Reads the game, catches what everyone else missed, strong in the tackle. Testing and communication high; nobody asks her to build the API.</div>
+  </div>
+
+  <div id="s15-eng3" class="step" data-x="794" data-y="-58" data-scale="1.2" data-scene="title xp-print pascal-print pitch photo1974 eng3 engcard3" data-target="0:45">
+    <div class="notes">Backend. The engine room: data, transactions, the thing that either commits or does not. Backend high, judgment high, frontend a guess.</div>
+  </div>
+
+  <div id="s16-eng4" class="step" data-x="431" data-y="-58" data-scale="1.2" data-scene="title xp-print pascal-print pitch photo1974 eng4 engcard4" data-target="0:45">
+    <div class="notes">Frontend. Sees the whole product the way the user sees it, and finishes: the feature exists when someone can click it. Frontend and communication high, operations a mystery.</div>
+  </div>
+
+  <div id="s17-handoff" class="step" data-x="0" data-y="-10" data-scale="2.1" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status" data-target="1:30">
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status band-fe band-be band-qa band-devops"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status band-fe band-be band-qa band-devops ticket-at-be"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status band-fe band-be band-qa band-devops ticket-at-qa"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status band-fe band-be band-qa band-devops ticket-at-ops"></div>
+    <div class="notes">This is how the ticket usually travels. Frontend builds the button, done, hands it over. Backend builds the endpoint, done, hands it over. QA finds the edge case, back it goes. Then it waits for a deploy window. Every line is a place where the ticket stops and somebody says: my part is done.</div>
+  </div>
+
+  <div id="s18-cover" class="step" data-x="0" data-y="-10" data-scale="2.1" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status ticket-at-be" data-target="2:00">
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status ticket-at-be eng-mark-fe"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status ticket-at-be eng-mark-fe eng-move-fe"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status ticket-at-be eng-mark-fe eng-move-fe eng-mark-be"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 englabel1 englabel2 englabel3 englabel4 ticket ticket-status ticket-at-done eng-mark-fe eng-move-fe eng-mark-be"></div>
+    <div class="notes">Now the same ticket, Total Football style. The frontend developer does not hand it over. She steps into the backend zone and writes the endpoint herself. What changed this year: the tool explains the unfamiliar code, drafts the first version, tells her what she does not know. That is the first step. And the backend developer does not disappear: he reviews it. AI gets you onto the pitch. A colleague keeps you on it. Movement and cover. The ticket goes to done without stopping at a line.</div>
+  </div>
+
+  <div id="s19-total-eng" class="step" data-x="631" data-y="-58" data-scale="1.25" data-scene="title xp-print pascal-print pitch photo1974 eng5 engcard5" data-target="1:30">
+    <div class="notes">And here is the shape we are drawing: the total engineer. Not a person who is best at everything. A person who can take any position when the ticket needs it, because the first step got cheap and the cover is still there. Your specialty is your home position. The whole product is your pitch.</div>
   </div>
 
 </div>

@@ -23,7 +23,7 @@ def Y(y):
 def S(v):
     return round(v * K)
 DIVIDERS = [L + BAND_W * i for i in (1, 2, 3)]
-BANDS = [("fe", "FE"), ("be", "BE"), ("qa", "QA"), ("devops", "DevOps")]
+BANDS = [("devops", "DevOps"), ("qa", "QA"), ("be", "BE"), ("fe", "FE")]
 
 PLAYERS = [
     ("p8", 8, "Jongbloed", 117, 470),
@@ -156,8 +156,12 @@ def labels():
 def mirrors():
     ids = ["names1974", "word-engineer", "move-suurbier", "cover-neeskens", "support", "mark-1", "wave-1", "mark-2", "wave-2", "mark-3", "wave-3", "four-line"]
     balls = ["ball-at-cruyff", "ball-at-fe", "ball-at-be-line", "ball-at-qa-line", "ball-start", "ball-w1", "ball-w2", "ball-w3"]
+    ticket_ids = ["ticket-at-be", "ticket-at-qa", "ticket-at-ops", "ticket-at-done"]
+    eng_ids = ["eng-mark-fe", "eng-move-fe", "eng-mark-be"]
     out = [f'<span data-obj="{i}" data-mirror="players" hidden></span>' for i in ids]
     out += [f'<span data-obj="{i}" data-mirror="ballg" hidden></span>' for i in balls]
+    out += [f'<span data-obj="{i}" data-mirror="ticketg" hidden></span>' for i in ticket_ids]
+    out += [f'<span data-obj="{i}" data-mirror="engs" hidden></span>' for i in eng_ids]
     return "\n".join(out)
 
 
