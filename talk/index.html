@@ -6,8 +6,8 @@
   <title>Total Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Archivo:wght@500;700&display=swap">
-  <link rel="stylesheet" href="css/poster.css">
-  <link rel="stylesheet" href="css/pitch.css">
+  <link rel="stylesheet" href="css/poster.css?v=3">
+  <link rel="stylesheet" href="css/pitch.css?v=3">
 </head>
 <body>
 <div id="impress"
@@ -184,6 +184,36 @@
 <text y="208" class="role">engineer</text>
 </g>
 </g>
+<g id="kits">
+<g data-obj="k1" class="player gk" style="--hx: 616px; --hy: 1122px;">
+<circle r="116" class="halo mover"/>
+<circle r="116" class="halo cover"/>
+<path d="M-27 24 L27 24 L30 58 L4 60 L0 44 L-4 60 L-30 58 Z" transform="scale(1.9)" class="shorts"/>
+<path d="M-30 -46 L-12 -54 Q0 -50 12 -54 L30 -46 L44 -28 L30 -18 L26 -24 L26 26 L-26 26 L-26 -24 L-30 -18 L-44 -28 Z" transform="scale(1.9)" class="shirt"/>
+<text y="9" class="num">1</text>
+</g>
+<g data-obj="k2" class="player" style="--hx: 1540px; --hy: 1122px;">
+<circle r="116" class="halo mover"/>
+<circle r="116" class="halo cover"/>
+<path d="M-27 24 L27 24 L30 58 L4 60 L0 44 L-4 60 L-30 58 Z" transform="scale(1.9)" class="shorts"/>
+<path d="M-30 -46 L-12 -54 Q0 -50 12 -54 L30 -46 L44 -28 L30 -18 L26 -24 L26 26 L-26 26 L-26 -24 L-30 -18 L-44 -28 Z" transform="scale(1.9)" class="shirt"/>
+<text y="9" class="num">4</text>
+</g>
+<g data-obj="k3" class="player" style="--hx: 2462px; --hy: 1122px;">
+<circle r="116" class="halo mover"/>
+<circle r="116" class="halo cover"/>
+<path d="M-27 24 L27 24 L30 58 L4 60 L0 44 L-4 60 L-30 58 Z" transform="scale(1.9)" class="shorts"/>
+<path d="M-30 -46 L-12 -54 Q0 -50 12 -54 L30 -46 L44 -28 L30 -18 L26 -24 L26 26 L-26 26 L-26 -24 L-30 -18 L-44 -28 Z" transform="scale(1.9)" class="shirt"/>
+<text y="9" class="num">10</text>
+</g>
+<g data-obj="k4" class="player" style="--hx: 3386px; --hy: 1122px;">
+<circle r="116" class="halo mover"/>
+<circle r="116" class="halo cover"/>
+<path d="M-27 24 L27 24 L30 58 L4 60 L0 44 L-4 60 L-30 58 Z" transform="scale(1.9)" class="shorts"/>
+<path d="M-30 -46 L-12 -54 Q0 -50 12 -54 L30 -46 L44 -28 L30 -18 L26 -24 L26 26 L-26 26 L-26 -24 L-30 -18 L-44 -28 Z" transform="scale(1.9)" class="shirt"/>
+<text y="9" class="num">9</text>
+</g>
+</g>
 <g id="ballg" data-obj="ball" class="ball" style="--hx: 412px; --hy: 1415px;">
 <image href="img/ball.png" x="-52" y="-52" width="104" height="104"/>
 </g>
@@ -223,6 +253,10 @@
 <span data-obj="eng-mark-fe" data-mirror="engs" hidden></span>
 <span data-obj="eng-move-fe" data-mirror="engs" hidden></span>
 <span data-obj="eng-mark-be" data-mirror="engs" hidden></span>
+<span data-obj="kit-mark-a" data-mirror="kits" hidden></span>
+<span data-obj="kit-swap-a" data-mirror="kits" hidden></span>
+<span data-obj="kit-mark-b" data-mirror="kits" hidden></span>
+<span data-obj="kit-swap-b" data-mirror="kits" hidden></span>
 <!-- pitch:end -->
 
     <img class="place figure" data-obj="fig1" src="img/player1.png" alt="" style="left: 1846px; top: 1612px; width: 540px;">
@@ -295,10 +329,7 @@
       </div>
     </div>
     <span data-obj="ai-boost" data-mirror="poster" hidden></span>
-    <span data-obj="eng-mark-a" data-mirror="engs" hidden></span>
-    <span data-obj="eng-swap-a" data-mirror="engs" hidden></span>
-    <span data-obj="eng-mark-b" data-mirror="engs" hidden></span>
-    <span data-obj="eng-swap-b" data-mirror="engs" hidden></span>
+
     <div class="place stamp" data-obj="stamp5" style="left: 3900px; top: 1760px;">Does not exist</div>
     <div id="engs" class="place" style="left: 0; top: 0; width: 0; height: 0; overflow: visible;">
     <img class="place figure" data-obj="eng1" src="img/dev-devops.png" alt="" style="left: 1846px; top: 1612px; width: 540px;">
@@ -405,12 +436,12 @@
     <div class="notes">Now add the tool. Watch the gold. The DevOps engineer can draft a React component. The frontend engineer can write the migration and read the logs. QA can write the fix, not only the bug report. Nobody became a total engineer; nobody needs to. The gaps got smaller, and the first step into somebody else's lane got cheap. Two things did not change much: communication and judgment. Those are still ours, and they are the ones that matter most when the tool is wrong.</div>
   </div>
 
-  <div id="s14-move" class="step" data-x="0" data-y="220" data-scale="2.1" data-scene="title xp-print pascal-print pitch photo1974 eng1 mini1 eng2 mini2 eng3 mini3 eng4 mini4 ai-boost" data-target="1:00">
-    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 mini1 eng2 mini2 eng3 mini3 eng4 mini4 ai-boost eng-mark-a"></div>
-    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 ai-boost eng-mark-a eng-swap-a"></div>
-    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 ai-boost eng-mark-a eng-swap-a eng-mark-b"></div>
-    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 eng1 eng2 eng3 eng4 ai-boost eng-mark-a eng-swap-a eng-mark-b eng-swap-b"></div>
-    <div class="notes">And now the thing we saw in 1974. The frontend developer steps into the backend lane: the gold on her card is what lets her. The backend developer drops into operations to cover. QA moves up into the space the frontend left. Nobody was told. Same four people, new shape, and the shape holds. Your specialty is your home position. The whole product is your pitch.</div>
+  <div id="s14-move" class="step" data-x="0" data-y="-10" data-scale="2.25" data-scene="title xp-print pascal-print pitch photo1974 k1 k2 k3 k4" data-target="1:00">
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 k1 k2 k3 k4 kit-mark-a"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 k1 k2 k3 k4 kit-mark-a kit-swap-a"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 k1 k2 k3 k4 kit-mark-a kit-swap-a kit-mark-b"></div>
+    <div class="substep" data-scene="title xp-print pascal-print pitch photo1974 k1 k2 k3 k4 kit-mark-a kit-swap-a kit-mark-b kit-swap-b"></div>
+    <div class="notes">And now the thing we saw in 1974, with our four. The frontend developer steps into the backend lane: the gold on her card is what lets her. The backend developer drops back to cover operations. QA moves up into the space the frontend left. Nobody was told. Same four people, new shape, and the shape holds. Your specialty is your home position. The whole product is your pitch.</div>
   </div>
 
   <div id="s13-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">

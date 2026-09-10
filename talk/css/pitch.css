@@ -375,3 +375,13 @@
   --x: 3076px;
   --y: 1122px;
 }
+
+#pitch #kits.on-kit-mark-a [data-obj="k4"] .halo.mover,
+#pitch #kits.on-kit-mark-a [data-obj="k3"] .halo.cover,
+#pitch #kits.on-kit-mark-b [data-obj="k2"] .halo.mover {
+  opacity: 1;
+}
+
+#pitch #kits.on-kit-swap-a [data-obj="k4"].player { --x: 2462px; --y: 1122px; }
+#pitch #kits.on-kit-swap-a [data-obj="k3"].player { --x: 918px; --y: 626px; }
+#pitch #kits.on-kit-swap-b [data-obj="k2"].player { --x: 3386px; --y: 1122px; }

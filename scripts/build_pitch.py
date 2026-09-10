@@ -131,6 +131,25 @@ def trails():
 BALL_ART = '<image href="img/ball.png" x="-52" y="-52" width="104" height="104"/>'
 
 
+KITS = [("k1", 1, 1), ("k2", 4, 2), ("k3", 10, 3), ("k4", 9, 4)]
+
+
+def kits():
+    out = ['<g id="kits">']
+    for key, num, lane in KITS:
+        lx = OLD[0] + (OLD[1] - OLD[0]) / 4 * (lane - 0.5)
+        cls = "player gk" if lane == 1 else "player"
+        out.append(f'<g data-obj="{key}" class="{cls}" style="--hx: {X(lx)}px; --hy: {Y(470)}px;">')
+        out.append(f'<circle r="{S(50)}" class="halo mover"/>')
+        out.append(f'<circle r="{S(50)}" class="halo cover"/>')
+        out.append(f'<path d="{SHORTS}" transform="scale(1.9)" class="shorts"/>')
+        out.append(f'<path d="{SHIRT}" transform="scale(1.9)" class="shirt"/>')
+        out.append(f'<text y="{S(4)}" class="num">{num}</text>')
+        out.append('</g>')
+    out.append('</g>')
+    return "\n".join(out)
+
+
 def ball():
     chain = P(chain_path())
     return "\n".join([
@@ -158,10 +177,12 @@ def mirrors():
     balls = ["ball-at-cruyff", "ball-at-fe", "ball-at-be-line", "ball-at-qa-line", "ball-start", "ball-w1", "ball-w2", "ball-w3"]
     ticket_ids = ["ticket-at-be", "ticket-at-qa", "ticket-at-ops", "ticket-at-done"]
     eng_ids = ["eng-mark-fe", "eng-move-fe", "eng-mark-be"]
+    kit_ids = ["kit-mark-a", "kit-swap-a", "kit-mark-b", "kit-swap-b"]
     out = [f'<span data-obj="{i}" data-mirror="players" hidden></span>' for i in ids]
     out += [f'<span data-obj="{i}" data-mirror="ballg" hidden></span>' for i in balls]
     out += [f'<span data-obj="{i}" data-mirror="ticketg" hidden></span>' for i in ticket_ids]
     out += [f'<span data-obj="{i}" data-mirror="engs" hidden></span>' for i in eng_ids]
+    out += [f'<span data-obj="{i}" data-mirror="kits" hidden></span>' for i in kit_ids]
     return "\n".join(out)
 
 
@@ -172,7 +193,7 @@ def fragment():
         '<defs>',
         '<filter id="disc-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/></filter>',
         '</defs>',
-        bands(), trails(), players(), ball(), labels(),
+        bands(), trails(), players(), kits(), ball(), labels(),
         '</svg>',
         mirrors(),
         END,
