@@ -401,3 +401,42 @@ body.impress-mouse-timeout {
 .stamp:not(.on) {
   transform: rotate(-14deg) scale(1.6);
 }
+
+.minicard .bar {
+  position: relative;
+}
+
+.minicard .fill.ai {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  background: linear-gradient(90deg, #E8B923, #F6D35B);
+  opacity: 0;
+  z-index: -1;
+}
+
+.minicard .fill:not(.ai) {
+  position: relative;
+  z-index: 1;
+}
+
+#poster.on-ai-boost .minicard.on .fill.ai {
+  width: var(--v);
+  opacity: 1;
+  transition: width 1.4s cubic-bezier(0.45, 0, 0.15, 1) 0.2s, opacity 0.3s ease;
+}
+
+.minicard .radar .shape.ai {
+  fill: rgba(232, 185, 35, 0.35);
+  stroke: #E8B923;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  transform-origin: 100px 100px;
+  transform: scale(0);
+  transition: transform 1.4s cubic-bezier(0.45, 0, 0.15, 1) 0.2s;
+}
+
+#poster.on-ai-boost .minicard.on .radar .shape.ai {
+  transform: scale(1);
+}
