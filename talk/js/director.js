@@ -39,6 +39,7 @@ function installSceneWiring() {
     applyScene(poster, goingBack ? lastSceneOf(e.detail.next) : sceneOf(e.detail.next));
   });
   document.addEventListener('impress:stepenter', e => {
+    clearStagger();
     if (goingBack) {
       revealAllSubsteps(e.target);
       applyScene(poster, currentScene(e.target));
@@ -46,8 +47,36 @@ function installSceneWiring() {
       applyScene(poster, sceneOf(e.target));
     }
   });
-  document.addEventListener('impress:substep:enter', e => applyScene(poster, sceneOf(e.detail.substep)));
-  document.addEventListener('impress:substep:leave', e => applyScene(poster, currentScene(e.target)));
+  document.addEventListener('impress:substep:enter', e => enterSubstep(e.detail.substep));
+  document.addEventListener('impress:substep:leave', e => { clearStagger(); applyScene(poster, currentScene(e.target)); });
+}
+
+let staggerTimers = [];
+
+function clearStagger() {
+  for (const t of staggerTimers) clearTimeout(t);
+  staggerTimers = [];
+}
+
+function enterSubstep(sub) {
+  clearStagger();
+  const groups = sub.dataset.stagger;
+  if (!groups) { applyScene(poster, sceneOf(sub)); return; }
+  const shows = groups.split('|').map(g => g.trim().split(/\s+/));
+  const hides = (sub.dataset.staggerHide || '').split('|').map(g => g.trim().split(/\s+/).filter(Boolean));
+  const gap = Number(sub.dataset.staggerMs) || 1000;
+  const full = sceneOf(sub);
+  const current = new Set(full);
+  for (const g of shows) for (const id of g) current.delete(id);
+  for (const g of hides) for (const id of g) current.add(id);
+  applyScene(poster, current);
+  shows.forEach((g, i) => {
+    staggerTimers.push(setTimeout(() => {
+      for (const id of g) current.add(id);
+      for (const id of (hides[i] || [])) current.delete(id);
+      applyScene(poster, current);
+    }, gap * (i + 1)));
+  });
 }
 
 function installClickerSafety() {
