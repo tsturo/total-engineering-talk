@@ -1,0 +1,72 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Pitch stage"
+    },
+    {
+      "id": "page-2",
+      "name": "Poster layout"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "Pitch stage",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 840,
+      "page": "page-1"
+    },
+    {
+      "file": "SpaciousEditorial.dc.html",
+      "title": "1. Spacious editorial",
+      "x": 0,
+      "y": 0,
+      "w": 1400,
+      "h": 920,
+      "page": "page-2"
+    },
+    {
+      "file": "ScrapbookWall.dc.html",
+      "title": "2. Scrapbook wall",
+      "x": 1500,
+      "y": 0,
+      "w": 1400,
+      "h": 920,
+      "page": "page-2"
+    },
+    {
+      "file": "PitchDominant.dc.html",
+      "title": "3. Pitch dominant",
+      "x": 3000,
+      "y": 0,
+      "w": 1400,
+      "h": 920,
+      "page": "page-2"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "pitch-brief",
+      "x": 0,
+      "y": -150,
+      "w": 700,
+      "page": "page-1",
+      "text": "Pitch stage, decided: pitch.png as the photographic ground, with department bands, numbered orange discs, ball and trails as vector on top."
+    },
+    {
+      "id": "layout-brief",
+      "x": 0,
+      "y": -150,
+      "w": 700,
+      "page": "page-2",
+      "text": "Poster layout: how dense the paper around the pitch should be. Grey boxes are placeholders for real photographs, dashed boxes are live-text cards, ovals are scrapbook objects. 1 is the recommendation."
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-2"
+  }
+}

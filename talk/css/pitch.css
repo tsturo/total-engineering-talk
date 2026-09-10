@@ -1,0 +1,377 @@
+#pitch {
+  overflow: visible;
+}
+
+#pitch text {
+  text-anchor: middle;
+  paint-order: stroke fill;
+}
+
+#pitch .tag {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: 79px;
+  fill: #F4F1E8;
+}
+
+#pitch .divider {
+  stroke: #151515;
+  stroke-opacity: 0.78;
+  stroke-width: 18;
+  stroke-dasharray: 60 36;
+  stroke-linecap: round;
+}
+
+#pitch .player {
+  transform: translate(var(--x, var(--hx)), var(--y, var(--hy)));
+  transition: transform 1.2s cubic-bezier(0.45, 0, 0.15, 1), opacity 0.45s ease;
+}
+
+#pitch .player .shirt {
+  fill: #F36C21;
+  stroke: #151515;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  filter: url(#disc-shadow);
+}
+
+#pitch .player.gk .shirt {
+  fill: #2F6B4F;
+}
+
+#pitch .player .shorts {
+  fill: #1c1c1c;
+  stroke: #151515;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  filter: url(#disc-shadow);
+}
+
+#pitch .player .halo {
+  fill: none;
+  stroke-width: 12;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#pitch .player .halo.mover {
+  stroke: #F36C21;
+  fill: rgba(243, 108, 33, 0.22);
+}
+
+#pitch .player .halo.cover {
+  stroke: #FFFFFF;
+  stroke-dasharray: 22 14;
+  stroke-linecap: round;
+  fill: rgba(255, 255, 255, 0.14);
+}
+
+#pitch .player .num {
+  font-family: var(--font-display);
+  font-size: 60px;
+  fill: #FFFFFF;
+}
+
+#pitch .player .name,
+#pitch .player .role {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: 62px;
+  fill: #FFFFFF;
+  stroke: #151515;
+  stroke-width: 16;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+#players.on-names1974 .name {
+  opacity: 1;
+}
+
+#players.on-word-engineer .role {
+  opacity: 1;
+}
+
+#players.on-move-suurbier [data-obj="p20"] {
+  --x: 2172px;
+  --y: 392px;
+}
+
+#players.on-move-suurbier [data-obj="p20"] .halo.mover,
+#players.on-cover-neeskens [data-obj="p13"] .halo.cover,
+#players.on-support [data-obj="p16"] .halo.cover {
+  opacity: 1;
+}
+
+#players.on-cover-neeskens [data-obj="p13"] {
+  --x: 1153px;
+  --y: 514px;
+}
+
+#players.on-support [data-obj="p16"] {
+  --x: 3238px;
+  --y: 514px;
+}
+
+#pitch .ball {
+  transform: translate(var(--x, var(--hx)), var(--y, var(--hy)));
+  transition: transform 1s cubic-bezier(0.3, 0, 0.2, 1), opacity 0.4s ease;
+  filter: url(#disc-shadow);
+}
+
+#pitch g#ball-flight.ball {
+  transform: none;
+  offset-rotate: 0deg;
+  offset-distance: 0%;
+  transition: opacity 0.3s ease;
+}
+
+#pitch g#ball-flight.ball.on {
+  transition: opacity 0.3s ease, offset-distance 6s linear;
+  offset-distance: 100%;
+}
+
+#pitch g#ball-flight.ball > * {
+  transform: scale(1.5);
+}
+
+#ballg.on-ball-at-cruyff {
+  --x: 3585px;
+  --y: 1032px;
+}
+
+#ballg.on-ball-at-fe {
+  --x: 412px;
+  --y: 1415px;
+}
+
+#ballg.on-ball-at-be-line {
+  --x: 1033px;
+  --y: 1415px;
+}
+
+#ballg.on-ball-at-qa-line {
+  --x: 1955px;
+  --y: 1415px;
+}
+
+#pitch .trail {
+  fill: none;
+  stroke-width: 21;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.45, 0, 0.15, 1), opacity 0.3s ease;
+}
+
+#pitch .trail.on {
+  stroke-dashoffset: 0;
+}
+
+#pitch .trail.chain {
+  stroke: #FFFFFF;
+  stroke-width: 14;
+  transition-duration: 6s;
+  transition-timing-function: linear;
+}
+
+#pitch .trail.move {
+  stroke: #F36C21;
+}
+
+#pitch .trail.cover {
+  stroke: #FFFFFF;
+}
+
+#pitch .possibilities .dotted {
+  fill: none;
+  stroke: #F36C21;
+  stroke-opacity: 0.6;
+  stroke-width: 12;
+  stroke-dasharray: 0.02 0.02;
+  stroke-linecap: round;
+}
+
+#pitch .hand-lbl {
+  font-family: var(--font-hand);
+  font-size: 106px;
+  stroke: #151515;
+  stroke-width: 18;
+}
+
+#pitch .hand-lbl.orange {
+  fill: #F36C21;
+}
+
+#pitch .hand-lbl.white {
+  fill: #FFFFFF;
+}
+
+
+#players.on-mark-1 [data-obj="p20"] .halo.mover,
+#players.on-mark-1 [data-obj="p6"] .halo.cover,
+#players.on-mark-2 [data-obj="p13"] .halo.mover,
+#players.on-mark-2 [data-obj="p3"] .halo.cover,
+#players.on-mark-3 [data-obj="p16"] .halo.mover,
+#players.on-mark-3 [data-obj="p15"] .halo.mover,
+#players.on-mark-3 [data-obj="p14"] .halo.cover {
+  opacity: 1;
+}
+
+#players.on-wave-1 [data-obj="p20"] {
+  --x: 3122px;
+  --y: 266px;
+}
+
+#players.on-wave-1 [data-obj="p16"] {
+  --x: 2566px;
+  --y: 739px;
+}
+
+#players.on-wave-1 [data-obj="p6"] {
+  --x: 1153px;
+  --y: 446px;
+}
+
+#players.on-wave-2 [data-obj="p13"] {
+  --x: 3354px;
+  --y: 807px;
+}
+
+#players.on-wave-2 [data-obj="p14"] {
+  --x: 3029px;
+  --y: 1325px;
+}
+
+#players.on-wave-2 [data-obj="p3"] {
+  --x: 1732px;
+  --y: 1235px;
+}
+
+#players.on-wave-3 [data-obj="p6"] {
+  --x: 1269px;
+  --y: 514px;
+}
+
+#players.on-wave-3 [data-obj="p17"] {
+  --x: 1223px;
+  --y: 964px;
+}
+
+#players.on-wave-3 [data-obj="p2"] {
+  --x: 1223px;
+  --y: 1280px;
+}
+
+#players.on-wave-3 [data-obj="p12"] {
+  --x: 1269px;
+  --y: 1775px;
+}
+
+#players.on-wave-3 [data-obj="p20"] {
+  --x: 1871px;
+  --y: 356px;
+}
+
+#players.on-wave-3 [data-obj="p16"] {
+  --x: 2010px;
+  --y: 784px;
+}
+
+#players.on-wave-3 [data-obj="p3"] {
+  --x: 1825px;
+  --y: 1122px;
+}
+
+#players.on-wave-3 [data-obj="p13"] {
+  --x: 2010px;
+  --y: 1460px;
+}
+
+#players.on-wave-3 [data-obj="p15"] {
+  --x: 1871px;
+  --y: 1888px;
+}
+
+#players.on-wave-3 [data-obj="p14"] {
+  --x: 2520px;
+  --y: 1122px;
+}
+
+#ballg.on-ball-w1 {
+  --x: 3215px;
+  --y: 311px;
+}
+
+#ballg.on-ball-w2 {
+  --x: 3446px;
+  --y: 829px;
+}
+
+#ballg.on-ball-w3 {
+  --x: 2358px;
+  --y: 1122px;
+}
+
+#ballg.on-ball-start {
+  --x: 1570px;
+  --y: 739px;
+}
+
+#pitch .ball.on {
+  transition: transform 1.2s cubic-bezier(0.45, 0, 0.15, 1), opacity 0.4s ease;
+}
+
+#players.on-four-line .num {
+  opacity: 0;
+}
+
+#players.on-four-line .halo {
+  opacity: 0 !important;
+}
+
+#players.on-four-line [data-obj="p8"] {
+  --x: 412px;
+  --y: 1122px;
+}
+
+#players.on-four-line [data-obj="p2"] {
+  --x: 1269px;
+  --y: 1122px;
+}
+
+#players.on-four-line [data-obj="p3"] {
+  --x: 2149px;
+  --y: 1122px;
+}
+
+#players.on-four-line [data-obj="p14"] {
+  --x: 3076px;
+  --y: 1122px;
+}
+
+#players.on-four-line .num,
+#players.on-four-line .halo {
+  opacity: 0 !important;
+}
+
+#players.on-four-line [data-obj="p8"] {
+  --x: 412px;
+  --y: 1122px;
+}
+
+#players.on-four-line [data-obj="p2"] {
+  --x: 1269px;
+  --y: 1122px;
+}
+
+#players.on-four-line [data-obj="p3"] {
+  --x: 2149px;
+  --y: 1122px;
+}
+
+#players.on-four-line [data-obj="p14"] {
+  --x: 3076px;
+  --y: 1122px;
+}
