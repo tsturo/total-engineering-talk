@@ -165,14 +165,27 @@ AGENTS = [
 ]
 
 
+BOT = "\n".join([
+    '<line x1="0" y1="-52" x2="0" y2="-38" class="bot-line"/>',
+    '<circle cy="-56" r="7" class="bot-fill"/>',
+    '<rect x="-34" y="-38" width="68" height="56" rx="12" class="bot-head"/>',
+    '<rect x="-24" y="-24" width="16" height="14" rx="3" class="bot-eye"/>',
+    '<rect x="8" y="-24" width="16" height="14" rx="3" class="bot-eye"/>',
+    '<rect x="-16" y="2" width="32" height="6" rx="3" class="bot-mouth"/>',
+    '<rect x="-42" y="-20" width="8" height="20" rx="3" class="bot-ear"/>',
+    '<rect x="34" y="-20" width="8" height="20" rx="3" class="bot-ear"/>',
+    '<rect x="-24" y="20" width="48" height="26" rx="6" class="bot-body"/>',
+])
+
+
 def agents():
     out = ['<g id="agents">']
     for key, label, x, y in AGENTS:
         out.append(f'<g data-obj="{key}" class="agent" style="--hx: {X(x)}px; --hy: {Y(y)}px;">')
         out.append(f'<circle r="{S(50)}" class="halo mover"/>')
-        out.append(f'<circle r="{S(40)}" class="disc"/>')
-        out.append(f'<g class="ai-badge" transform="translate({S(30)} {S(-34)})"><circle r="{S(16)}"/><text y="{S(6)}">AI</text></g>')
-        out.append(f'<text y="{S(78)}" class="role">{label}</text>')
+        out.append(f'<circle r="{S(46)}" class="disc"/>')
+        out.append(f'<g class="bot" transform="scale({K*1.05:.3f}) translate(0 6)">{BOT}</g>')
+        out.append(f'<text y="{S(84)}" class="role">{label}</text>')
         out.append('</g>')
     out.append('</g>')
     return "\n".join(out)
