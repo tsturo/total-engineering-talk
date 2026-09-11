@@ -154,12 +154,13 @@ def kits():
 
 AGENTS = [
     ("a-orch", "Orchestrator", 300, 470),
-    ("a-build1", "Build", 660, 250),
-    ("a-build2", "Build", 660, 470),
-    ("a-build3", "Build", 660, 690),
-    ("a-test", "Test", 940, 330),
-    ("a-review", "Review", 1160, 470),
-    ("a-sec", "Security", 940, 610),
+    ("a-build1", "Build", 640, 250),
+    ("a-build2", "Build", 640, 470),
+    ("a-build3", "Build", 640, 690),
+    ("a-test", "Test", 900, 470),
+    ("a-rev-code", "Code review", 1170, 240),
+    ("a-rev-sec", "Security review", 1170, 470),
+    ("a-rev-prod", "Product review", 1170, 700),
     ("a-ship", "Ship", 1480, 470),
 ]
 
@@ -192,11 +193,14 @@ def agent_lines():
     out.append(L("l-o-b3", "a-orch", "a-build3", "fwd"))
     out.append(L("l-b1-t", "a-build1", "a-test", "fwd"))
     out.append(L("l-b2-t", "a-build2", "a-test", "fwd"))
-    out.append(L("l-b3-s", "a-build3", "a-sec", "fwd"))
-    out.append(L("l-t-r", "a-test", "a-review", "fwd"))
-    out.append(L("l-s-r", "a-sec", "a-review", "fwd"))
-    out.append(C("l-r-b2", "a-review", "a-build2", "back", -260))
-    out.append(L("l-r-sh", "a-review", "a-ship", "fwd"))
+    out.append(L("l-b3-t", "a-build3", "a-test", "fwd"))
+    out.append(L("l-t-rc", "a-test", "a-rev-code", "fwd"))
+    out.append(L("l-t-rs", "a-test", "a-rev-sec", "fwd"))
+    out.append(L("l-t-rp", "a-test", "a-rev-prod", "fwd"))
+    out.append(C("l-rs-b2", "a-rev-sec", "a-build2", "back", -220))
+    out.append(L("l-rc-sh", "a-rev-code", "a-ship", "fwd"))
+    out.append(L("l-rs-sh", "a-rev-sec", "a-ship", "fwd"))
+    out.append(L("l-rp-sh", "a-rev-prod", "a-ship", "fwd"))
     out.append('</g>')
     return "\n".join(out)
 

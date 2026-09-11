@@ -528,22 +528,22 @@
 #pitch .card-sm.main text { font-size: 44px; }
 
 #cards.on-cards-split #c-main { opacity: 0; }
-#cards.on-cards-split #c-143 { --x: 1593px; --y: 412px; }
-#cards.on-cards-split #c-144 { --x: 1593px; --y: 908px; }
-#cards.on-cards-split #c-145 { --x: 1593px; --y: 1403px; }
+#cards.on-cards-split #c-143 { --x: 1547px; --y: 412px; }
+#cards.on-cards-split #c-144 { --x: 1547px; --y: 908px; }
+#cards.on-cards-split #c-145 { --x: 1547px; --y: 1403px; }
 
-#cards.on-cards-to-test #c-143 { --x: 2080px; --y: 593px; }
-#cards.on-cards-to-test #c-144 { --x: 2404px; --y: 593px; }
-#cards.on-cards-to-test #c-145 { --x: 2242px; --y: 1223px; }
+#cards.on-cards-to-test #c-143 { --x: 1941px; --y: 874px; }
+#cards.on-cards-to-test #c-144 { --x: 2358px; --y: 874px; }
+#cards.on-cards-to-test #c-145 { --x: 2149px; --y: 694px; }
 
-#cards.on-cards-to-review #c-143 { --x: 2589px; --y: 874px; }
-#cards.on-cards-to-review #c-144 { --x: 2914px; --y: 874px; }
-#cards.on-cards-to-review #c-145 { --x: 2751px; --y: 694px; }
+#cards.on-cards-to-review #c-143 { --x: 2775px; --y: 379px; }
+#cards.on-cards-to-review #c-144 { --x: 2775px; --y: 897px; }
+#cards.on-cards-to-review #c-145 { --x: 2775px; --y: 1415px; }
 
-#cards.on-cards-pushback #c-144 { --x: 1593px; --y: 908px; }
+#cards.on-cards-pushback #c-144 { --x: 1547px; --y: 908px; }
 #cards.on-cards-pushback #c-144 rect.edge { fill: #E0322B; }
 
-#cards.on-cards-rebuilt #c-144 { --x: 2914px; --y: 874px; }
+#cards.on-cards-rebuilt #c-144 { --x: 2775px; --y: 897px; }
 #cards.on-cards-rebuilt #c-144 rect.edge { fill: #F36C21; }
 
 #cards.on-cards-at-ship #c-143, #cards.on-cards-at-ship #c-144, #cards.on-cards-at-ship #c-145 { opacity: 0; }
