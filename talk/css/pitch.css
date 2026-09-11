@@ -451,32 +451,19 @@
 }
 
 #pitch .agent .disc {
-  fill: #E9E4D6;
+  fill: #F4F1E8;
   stroke: #151515;
   stroke-width: 8;
   filter: url(#disc-shadow);
 }
 
-#pitch .agent .bot-head, #pitch .agent .bot-body, #pitch .agent .bot-ear {
-  fill: #8a8f8a;
-  stroke: #151515;
-  stroke-width: 4;
+#pitch .agent.orch .disc {
+  fill: #151515;
 }
 
-#pitch .agent .bot-eye {
-  fill: #E8B923;
-  stroke: #151515;
-  stroke-width: 3;
+#pitch .agent.orch image {
+  filter: brightness(1.25);
 }
-
-#pitch .agent .bot-mouth { fill: #151515; }
-#pitch .agent .bot-line { stroke: #151515; stroke-width: 4; }
-#pitch .agent .bot-fill { fill: #E8B923; stroke: #151515; stroke-width: 3; }
-
-#pitch .agent.orch .bot-head, #pitch .agent.orch .bot-body, #pitch .agent.orch .bot-ear {
-  fill: #F36C21;
-}
-
 
 #pitch .agent .role {
   font-family: var(--font-text);
@@ -505,7 +492,6 @@
 #pitch .al.back { stroke: #E0322B; stroke-dasharray: 0.05 0.03; }
 #pitch .al.back.on { stroke-dashoffset: 0; }
 
-#pitch .agent.orch .disc { fill: #FBE1CF; }
 
 #pitch .card-sm {
   transform: translate(var(--x, var(--hx)), var(--y, var(--hy)));
