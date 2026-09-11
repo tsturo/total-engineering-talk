@@ -153,12 +153,17 @@ def kits():
 
 
 AGENTS = [
-    ("a-refine", "Refine", 330, 470),
-    ("a-build1", "Build", 700, 260),
-    ("a-build2", "Build", 700, 680),
-    ("a-test", "Test", 900, 470),
-    ("a-review", "Review", 1150, 470),
-    ("a-ship", "Ship", 1450, 470),
+    ("a-refine", "Refine", 300, 470),
+    ("a-build1", "Build", 640, 260),
+    ("a-build2", "Build", 640, 680),
+    ("a-test", "Test", 880, 470),
+    ("a-review", "Review", 1140, 470),
+    ("a-ship", "Ship", 1480, 470),
+    ("a-build3", "Build", 640, 470),
+    ("a-test2", "Test", 880, 200),
+    ("a-docs", "Docs", 880, 740),
+    ("a-sec", "Security", 1140, 220),
+    ("a-perf", "Performance", 1140, 720),
 ]
 
 
