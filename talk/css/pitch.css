@@ -549,7 +549,7 @@
 #cards.on-cards-at-ship #c-143, #cards.on-cards-at-ship #c-144, #cards.on-cards-at-ship #c-145 { opacity: 0; }
 #cards.on-cards-at-ship #c-main { opacity: 1; --x: 3493px; --y: 897px; }
 
-#cards.on-cards-at-coach #c-main { --x: 3260px; --y: 2030px; }
+#cards.on-cards-at-coach #c-main { --x: 690px; --y: 1560px; }
 #cards.on-cards-done #c-main rect.edge { fill: #3BB143; }
 
 #pitch .beat {
