@@ -235,9 +235,9 @@ RUNS = [
     ("run-2a", "move", (655, 470), (1420, 330)),
     ("run-2b", "cover", (1240, 470), (1280, 560)),
     ("run-2c", "cover", (710, 650), (720, 520)),
-    ("run-3a", "move", (1156, 184), (840, 320)),
+    ("run-3a", "move", (1080, 300), (840, 320)),
     ("run-3b", "move", (1156, 757), (780, 810)),
-    ("run-3c", "cover", (1240, 470), (1060, 470)),
+    ("run-3c", "cover", (1280, 560), (1060, 470)),
 ]
 
 
@@ -246,15 +246,15 @@ def wobble(x1, y1, x2, y2):
     dx, dy = x2 - x1, y2 - y1
     L = math.hypot(dx, dy) or 1
     nx, ny = -dy / L, dx / L
-    c1 = (x1 + dx * 0.33 + nx * 28, y1 + dy * 0.33 + ny * 28)
-    c2 = (x1 + dx * 0.66 - nx * 28, y1 + dy * 0.66 - ny * 28)
+    c1 = (x1 + dx * 0.33 + nx * 18, y1 + dy * 0.33 + ny * 18)
+    c2 = (x1 + dx * 0.66 - nx * 18, y1 + dy * 0.66 - ny * 18)
     return f"M{x1} {y1} C{c1[0]:.0f} {c1[1]:.0f} {c2[0]:.0f} {c2[1]:.0f} {x2} {y2}"
 
 
 def run_arrows():
     out = ['<g id="runs">']
-    out.append('<defs><marker id="arrow-move" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#F36C21"/></marker>')
-    out.append('<marker id="arrow-cover" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#FFFFFF"/></marker></defs>')
+    out.append('<defs><marker id="arrow-move" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#E0322B"/></marker>')
+    out.append('<marker id="arrow-cover" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2B6BE0"/></marker></defs>')
     for key, kind, (x1, y1), (x2, y2) in RUNS:
         out.append(f'<path data-obj="{key}" class="run {kind}" pathLength="1" d="{P(wobble(x1, y1, x2, y2))}"/>')
     out.append('</g>')

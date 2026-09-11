@@ -65,8 +65,8 @@
 }
 
 #pitch .player .halo.mover {
-  stroke: #F36C21;
-  fill: rgba(243, 108, 33, 0.22);
+  stroke: #E0322B;
+  fill: rgba(224, 50, 43, 0.22);
 }
 
 #pitch .player .halo.ai {
@@ -104,10 +104,10 @@
 }
 
 #pitch .player .halo.cover {
-  stroke: #FFFFFF;
+  stroke: #2B6BE0;
   stroke-dasharray: 22 14;
   stroke-linecap: round;
-  fill: rgba(255, 255, 255, 0.14);
+  fill: rgba(43, 107, 224, 0.18);
 }
 
 #pitch .player .num {
@@ -583,7 +583,7 @@
 
 #pitch .run {
   fill: none;
-  stroke-width: 12;
+  stroke-width: 14;
   stroke-linecap: round;
   stroke-dasharray: 0.04 0.025;
   opacity: 0;
@@ -591,8 +591,9 @@
 }
 
 #pitch .run.on {
-  opacity: 0.95;
+  opacity: 1;
   animation: run-draw 1.1s cubic-bezier(0.45, 0, 0.15, 1) both;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.6));
 }
 
 @keyframes run-draw {
@@ -600,5 +601,5 @@
   to { stroke-dasharray: 0.04 0.025; stroke-dashoffset: 0; }
 }
 
-#pitch .run.move { stroke: #F36C21; marker-end: url(#arrow-move); }
-#pitch .run.cover { stroke: #FFFFFF; marker-end: url(#arrow-cover); }
+#pitch .run.move { stroke: #E0322B; marker-end: url(#arrow-move); }
+#pitch .run.cover { stroke: #2B6BE0; marker-end: url(#arrow-cover); }
