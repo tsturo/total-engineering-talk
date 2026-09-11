@@ -74,7 +74,7 @@ function applyBeat(el) {
   const pad = 40, h = 120;
   text.setAttribute('x', 0); text.setAttribute('y', 0);
   const w = text.getBBox().width + pad * 2;
-  const offsets = { above: [-w / 2, -h - 190], below: [-w / 2, 230], left: [-w - 190, -h / 2], right: [190, -h / 2] };
+  const offsets = { above: [-w / 2, -h - 260], below: [-w / 2, 260], left: [-w - 200, -h / 2], right: [200, -h / 2] };
   const [dx, dy] = offsets[side] || offsets.above;
   const x = ax + dx, y = ay + dy;
   paper.setAttribute('x', x); paper.setAttribute('y', y); paper.setAttribute('width', w); paper.setAttribute('height', h); paper.setAttribute('rx', 6);
