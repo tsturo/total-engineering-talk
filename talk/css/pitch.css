@@ -483,23 +483,21 @@
   opacity: 0;
 }
 
-#pitch .al path {
+#pitch .al {
   fill: none;
   stroke-width: 11;
   stroke-linecap: round;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  transition: stroke-dashoffset 1.1s cubic-bezier(0.45, 0, 0.15, 1);
+  transition: stroke-dashoffset 1.1s cubic-bezier(0.45, 0, 0.15, 1), opacity 0.4s ease;
 }
 
-#pitch .al.on path { stroke-dashoffset: 0; }
+#pitch .al.on { stroke-dashoffset: 0; }
+#pitch .al.fwd { stroke: #FFFFFF; stroke-opacity: 0.95; }
+#pitch .al.back { stroke: #E0322B; stroke-dasharray: 0.05 0.03; }
+#pitch .al.back.on { stroke-dashoffset: 0; }
 
-#pitch .al .fwd { stroke: #FFFFFF; stroke-opacity: 0.95; }
-#pitch .al .cov { stroke: #FFFFFF; stroke-opacity: 0.85; stroke-dasharray: 0.05 0.03; }
-#pitch .al .back { stroke: #E0322B; stroke-dasharray: 0.05 0.03; }
-
-#pitch .al.on .cov { stroke-dashoffset: 0; }
-#pitch .al.on .back { stroke-dashoffset: 0; }
+#pitch .agent.orch .disc { fill: #F36C21; }
 
 #pitch .card-sm {
   transform: translate(var(--x, var(--hx)), var(--y, var(--hy)));
@@ -519,8 +517,6 @@
   filter: none;
 }
 
-#pitch .card-sm.test rect.edge { fill: #3BB143; }
-
 #pitch .card-sm text {
   font-family: var(--font-display);
   font-size: 40px;
@@ -532,26 +528,35 @@
 #pitch .card-sm.main text { font-size: 44px; }
 
 #cards.on-cards-split #c-main { opacity: 0; }
-#cards.on-cards-split #c-143 { --x: 1547px; --y: 435px; }
-#cards.on-cards-split #c-144 { --x: 1547px; --y: 908px; }
-#cards.on-cards-split #c-145 { --x: 1547px; --y: 1381px; }
-#cards.on-cards-split #c-t1 { --x: 2103px; --y: 300px; }
-#cards.on-cards-split #c-t2 { --x: 2103px; --y: 908px; }
+#cards.on-cards-split #c-143 { --x: 1593px; --y: 412px; }
+#cards.on-cards-split #c-144 { --x: 1593px; --y: 908px; }
+#cards.on-cards-split #c-145 { --x: 1593px; --y: 1403px; }
 
-#cards.on-cards-at-review #c-143 { --x: 2543px; --y: 874px; }
-#cards.on-cards-at-review #c-144 { --x: 2867px; --y: 874px; }
-#cards.on-cards-at-review #c-145 { --x: 2705px; --y: 694px; }
-#cards.on-cards-at-review #c-t1 { --x: 2705px; --y: 345px; }
-#cards.on-cards-at-review #c-t2 { --x: 2705px; --y: 1370px; }
+#cards.on-cards-to-test #c-143 { --x: 2080px; --y: 593px; }
+#cards.on-cards-to-test #c-144 { --x: 2404px; --y: 593px; }
+#cards.on-cards-to-test #c-145 { --x: 2242px; --y: 1223px; }
 
-#cards.on-cards-pushback #c-144 { --x: 1547px; --y: 908px; }
+#cards.on-cards-to-review #c-143 { --x: 2589px; --y: 874px; }
+#cards.on-cards-to-review #c-144 { --x: 2914px; --y: 874px; }
+#cards.on-cards-to-review #c-145 { --x: 2751px; --y: 694px; }
+
+#cards.on-cards-pushback #c-144 { --x: 1593px; --y: 908px; }
 #cards.on-cards-pushback #c-144 rect.edge { fill: #E0322B; }
 
-#cards.on-cards-rebuilt #c-144 { --x: 2867px; --y: 874px; }
+#cards.on-cards-rebuilt #c-144 { --x: 2914px; --y: 874px; }
 #cards.on-cards-rebuilt #c-144 rect.edge { fill: #F36C21; }
 
-#cards.on-cards-at-ship #c-143, #cards.on-cards-at-ship #c-144, #cards.on-cards-at-ship #c-145, #cards.on-cards-at-ship #c-t1, #cards.on-cards-at-ship #c-t2 { opacity: 0; }
+#cards.on-cards-at-ship #c-143, #cards.on-cards-at-ship #c-144, #cards.on-cards-at-ship #c-145 { opacity: 0; }
 #cards.on-cards-at-ship #c-main { opacity: 1; --x: 3493px; --y: 897px; }
 
 #cards.on-cards-at-coach #c-main { --x: 3260px; --y: 2030px; }
 #cards.on-cards-done #c-main rect.edge { fill: #3BB143; }
+
+#pitch .beat {
+  font-family: var(--font-hand);
+  font-size: 76px;
+  fill: #FFFFFF;
+  stroke: #151515;
+  stroke-width: 14;
+  text-anchor: middle;
+}

@@ -153,17 +153,14 @@ def kits():
 
 
 AGENTS = [
-    ("a-refine", "Refine", 300, 470),
-    ("a-build1", "Build", 640, 260),
-    ("a-build2", "Build", 640, 680),
-    ("a-test", "Test", 880, 470),
-    ("a-review", "Review", 1140, 470),
+    ("a-orch", "Orchestrator", 300, 470),
+    ("a-build1", "Build", 660, 250),
+    ("a-build2", "Build", 660, 470),
+    ("a-build3", "Build", 660, 690),
+    ("a-test", "Test", 940, 330),
+    ("a-review", "Review", 1160, 470),
+    ("a-sec", "Security", 940, 610),
     ("a-ship", "Ship", 1480, 470),
-    ("a-build3", "Build", 640, 470),
-    ("a-test2", "Test", 880, 200),
-    ("a-docs", "Docs", 880, 740),
-    ("a-sec", "Security", 1140, 220),
-    ("a-perf", "Performance", 1140, 720),
 ]
 
 
@@ -182,36 +179,24 @@ def agents():
 
 def agent_lines():
     pos = {k: (x, y) for k, _, x, y in AGENTS}
-    def L(a, b, cls, dx=0, dy=0):
+    def L(key, a, b, cls):
         ax, ay = pos[a]; bx, by = pos[b]
-        return f'<path class="{cls}" pathLength="1" d="{P(f"M{ax+dx} {ay+dy} L{bx-dx} {by-dy}")}"/>'
-    def C(a, b, cls, bend):
+        return f'<path data-obj="{key}" class="al {cls}" pathLength="1" d="{P(f"M{ax} {ay} L{bx} {by}")}"/>'
+    def C(key, a, b, cls, bend):
         ax, ay = pos[a]; bx, by = pos[b]
         mx, my = (ax + bx) / 2, (ay + by) / 2 + bend
-        return f'<path class="{cls}" pathLength="1" d="{P(f"M{ax} {ay} Q{mx} {my} {bx} {by}")}"/>'
+        return f'<path data-obj="{key}" class="al {cls}" pathLength="1" d="{P(f"M{ax} {ay} Q{mx} {my} {bx} {by}")}"/>'
     out = ['<g id="agent-lines">']
-    out.append('<g data-obj="al-forward" class="al">')
-    for b_ in ("a-build1", "a-build2", "a-build3"):
-        out.append(L("a-refine", b_, "fwd"))
-    for b_ in ("a-build1", "a-build2", "a-build3"):
-        out.append(L(b_, "a-review", "fwd"))
-    out.append(L("a-review", "a-ship", "fwd"))
-    out.append('</g>')
-    out.append('<g data-obj="al-cover" class="al">')
-    out.append(L("a-refine", "a-test", "cov"))
-    out.append(L("a-refine", "a-test2", "cov"))
-    out.append(L("a-test", "a-review", "cov"))
-    out.append(L("a-test2", "a-sec", "cov"))
-    out.append(L("a-build2", "a-docs", "cov"))
-    out.append(L("a-docs", "a-perf", "cov"))
-    out.append(L("a-sec", "a-review", "cov"))
-    out.append(L("a-perf", "a-review", "cov"))
-    out.append('</g>')
-    out.append('<g data-obj="al-back" class="al">')
-    out.append(C("a-review", "a-build3", "back", -140))
-    out.append(C("a-sec", "a-build1", "back", -120))
-    out.append(C("a-perf", "a-build2", "back", 120))
-    out.append('</g>')
+    out.append(L("l-o-b1", "a-orch", "a-build1", "fwd"))
+    out.append(L("l-o-b2", "a-orch", "a-build2", "fwd"))
+    out.append(L("l-o-b3", "a-orch", "a-build3", "fwd"))
+    out.append(L("l-b1-t", "a-build1", "a-test", "fwd"))
+    out.append(L("l-b2-t", "a-build2", "a-test", "fwd"))
+    out.append(L("l-b3-s", "a-build3", "a-sec", "fwd"))
+    out.append(L("l-t-r", "a-test", "a-review", "fwd"))
+    out.append(L("l-s-r", "a-sec", "a-review", "fwd"))
+    out.append(C("l-r-b2", "a-review", "a-build2", "back", -260))
+    out.append(L("l-r-sh", "a-review", "a-ship", "fwd"))
     out.append('</g>')
     return "\n".join(out)
 
@@ -221,14 +206,12 @@ CARDS = [
     ("c-143", "ENG-143", "sub"),
     ("c-144", "ENG-144", "sub"),
     ("c-145", "ENG-145", "sub"),
-    ("c-t1", "tests", "test"),
-    ("c-t2", "tests", "test"),
 ]
 
 
 def cards():
     pos = {k: (x, y) for k, _, x, y in AGENTS}
-    rx, ry = pos["a-refine"]
+    rx, ry = pos["a-orch"]
     out = ['<g id="cards">']
     for key, label, kind in CARDS:
         out.append(f'<g id="{key}" data-obj="{key}" class="card-sm {kind}" style="--hx: {X(rx)}px; --hy: {Y(ry)}px;">')
@@ -255,6 +238,7 @@ def ball():
 def labels():
     return "\n".join([
         '<g id="labels">',
+        f'<text data-obj="beat" x="{CX}" y="{B+S(60)}" class="beat"></text>',
         f'<text data-obj="lbl-movement" x="{X(870)}" y="{Y(110)}" class="hand-lbl orange">Movement</text>',
         f'<text data-obj="lbl-cover" x="{X(380)}" y="{Y(170)}" class="hand-lbl white">Cover</text>',
         f'<text data-obj="lbl-ai" x="{X(1180)}" y="{Y(240)}" class="hand-lbl white">AI assistance</text>',
@@ -268,7 +252,7 @@ def mirrors():
     ticket_ids = ["ticket-at-be", "ticket-at-qa", "ticket-at-ops", "ticket-at-done"]
     eng_ids = ["eng-mark-fe", "eng-move-fe", "eng-mark-be"]
     kit_ids = ["kit-mark-a", "kit-swap-a", "kit-mark-b", "kit-swap-b"]
-    card_states = ["at-refine", "split", "at-review", "pushback", "rebuilt", "at-ship", "at-coach", "done"]
+    card_states = ["at-orch", "split", "to-test", "to-review", "pushback", "rebuilt", "at-ship", "at-coach", "done"]
     out_cards = [f'<span data-obj="cards-{i}" data-mirror="cards" hidden></span>' for i in card_states]
     out = [f'<span data-obj="{i}" data-mirror="players" hidden></span>' for i in ids]
     out += [f'<span data-obj="{i}" data-mirror="ballg" hidden></span>' for i in balls]

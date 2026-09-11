@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Archivo:wght@500;700&display=swap">
   <link rel="stylesheet" href="css/poster.css?v=7">
-  <link rel="stylesheet" href="css/pitch.css?v=10">
+  <link rel="stylesheet" href="css/pitch.css?v=11">
 </head>
 <body>
 <div id="impress"
@@ -237,97 +237,65 @@
 </g>
 </g>
 <g id="agent-lines">
-<g data-obj="al-forward" class="al">
-<path class="fwd" pathLength="1" d="M760 1122 L1547 649"/>
-<path class="fwd" pathLength="1" d="M760 1122 L1547 1595"/>
-<path class="fwd" pathLength="1" d="M760 1122 L1547 1122"/>
-<path class="fwd" pathLength="1" d="M1547 649 L2705 1122"/>
-<path class="fwd" pathLength="1" d="M1547 1595 L2705 1122"/>
-<path class="fwd" pathLength="1" d="M1547 1122 L2705 1122"/>
-<path class="fwd" pathLength="1" d="M2705 1122 L3493 1122"/>
-</g>
-<g data-obj="al-cover" class="al">
-<path class="cov" pathLength="1" d="M760 1122 L2103 1122"/>
-<path class="cov" pathLength="1" d="M760 1122 L2103 514"/>
-<path class="cov" pathLength="1" d="M2103 1122 L2705 1122"/>
-<path class="cov" pathLength="1" d="M2103 514 L2705 559"/>
-<path class="cov" pathLength="1" d="M1547 1595 L2103 1730"/>
-<path class="cov" pathLength="1" d="M2103 1730 L2705 1685"/>
-<path class="cov" pathLength="1" d="M2705 559 L2705 1122"/>
-<path class="cov" pathLength="1" d="M2705 1685 L2705 1122"/>
-</g>
-<g data-obj="al-back" class="al">
-<path class="back" pathLength="1" d="M2705 1122 Q2126 807 1547 1122"/>
-<path class="back" pathLength="1" d="M2705 559 Q2126 333 1547 649"/>
-<path class="back" pathLength="1" d="M2705 1685 Q2126 1910 1547 1595"/>
-</g>
+<path data-obj="l-o-b1" class="al fwd" pathLength="1" d="M760 1122 L1593 626"/>
+<path data-obj="l-o-b2" class="al fwd" pathLength="1" d="M760 1122 L1593 1122"/>
+<path data-obj="l-o-b3" class="al fwd" pathLength="1" d="M760 1122 L1593 1617"/>
+<path data-obj="l-b1-t" class="al fwd" pathLength="1" d="M1593 626 L2242 807"/>
+<path data-obj="l-b2-t" class="al fwd" pathLength="1" d="M1593 1122 L2242 807"/>
+<path data-obj="l-b3-s" class="al fwd" pathLength="1" d="M1593 1617 L2242 1437"/>
+<path data-obj="l-t-r" class="al fwd" pathLength="1" d="M2242 807 L2751 1122"/>
+<path data-obj="l-s-r" class="al fwd" pathLength="1" d="M2242 1437 L2751 1122"/>
+<path data-obj="l-r-b2" class="al back" pathLength="1" d="M2751 1122 Q2172 536 1593 1122"/>
+<path data-obj="l-r-sh" class="al fwd" pathLength="1" d="M2751 1122 L3493 1122"/>
 </g>
 <g id="agents">
-<g data-obj="a-refine" class="agent" style="--hx: 760px; --hy: 1122px;">
+<g data-obj="a-orch" class="agent orch" style="--hx: 760px; --hy: 1122px;">
 <circle r="116" class="halo mover"/>
 <circle r="93" class="disc"/>
 <g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
-<text y="181" class="role">Refine</text>
+<text y="181" class="role">Orchestrator</text>
 </g>
-<g data-obj="a-build1" class="agent" style="--hx: 1547px; --hy: 649px;">
-<circle r="116" class="halo mover"/>
-<circle r="93" class="disc"/>
-<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
-<text y="181" class="role">Build</text>
-</g>
-<g data-obj="a-build2" class="agent" style="--hx: 1547px; --hy: 1595px;">
+<g data-obj="a-build1" class="agent" style="--hx: 1593px; --hy: 626px;">
 <circle r="116" class="halo mover"/>
 <circle r="93" class="disc"/>
 <g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
 <text y="181" class="role">Build</text>
 </g>
-<g data-obj="a-test" class="agent" style="--hx: 2103px; --hy: 1122px;">
+<g data-obj="a-build2" class="agent" style="--hx: 1593px; --hy: 1122px;">
+<circle r="116" class="halo mover"/>
+<circle r="93" class="disc"/>
+<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
+<text y="181" class="role">Build</text>
+</g>
+<g data-obj="a-build3" class="agent" style="--hx: 1593px; --hy: 1617px;">
+<circle r="116" class="halo mover"/>
+<circle r="93" class="disc"/>
+<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
+<text y="181" class="role">Build</text>
+</g>
+<g data-obj="a-test" class="agent" style="--hx: 2242px; --hy: 807px;">
 <circle r="116" class="halo mover"/>
 <circle r="93" class="disc"/>
 <g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
 <text y="181" class="role">Test</text>
 </g>
-<g data-obj="a-review" class="agent" style="--hx: 2705px; --hy: 1122px;">
+<g data-obj="a-review" class="agent" style="--hx: 2751px; --hy: 1122px;">
 <circle r="116" class="halo mover"/>
 <circle r="93" class="disc"/>
 <g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
 <text y="181" class="role">Review</text>
+</g>
+<g data-obj="a-sec" class="agent" style="--hx: 2242px; --hy: 1437px;">
+<circle r="116" class="halo mover"/>
+<circle r="93" class="disc"/>
+<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
+<text y="181" class="role">Security</text>
 </g>
 <g data-obj="a-ship" class="agent" style="--hx: 3493px; --hy: 1122px;">
 <circle r="116" class="halo mover"/>
 <circle r="93" class="disc"/>
 <g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
 <text y="181" class="role">Ship</text>
-</g>
-<g data-obj="a-build3" class="agent" style="--hx: 1547px; --hy: 1122px;">
-<circle r="116" class="halo mover"/>
-<circle r="93" class="disc"/>
-<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
-<text y="181" class="role">Build</text>
-</g>
-<g data-obj="a-test2" class="agent" style="--hx: 2103px; --hy: 514px;">
-<circle r="116" class="halo mover"/>
-<circle r="93" class="disc"/>
-<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
-<text y="181" class="role">Test</text>
-</g>
-<g data-obj="a-docs" class="agent" style="--hx: 2103px; --hy: 1730px;">
-<circle r="116" class="halo mover"/>
-<circle r="93" class="disc"/>
-<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
-<text y="181" class="role">Docs</text>
-</g>
-<g data-obj="a-sec" class="agent" style="--hx: 2705px; --hy: 559px;">
-<circle r="116" class="halo mover"/>
-<circle r="93" class="disc"/>
-<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
-<text y="181" class="role">Security</text>
-</g>
-<g data-obj="a-perf" class="agent" style="--hx: 2705px; --hy: 1685px;">
-<circle r="116" class="halo mover"/>
-<circle r="93" class="disc"/>
-<g class="ai-badge" transform="translate(69 -79)"><circle r="37"/><text y="14">AI</text></g>
-<text y="181" class="role">Performance</text>
 </g>
 </g>
 <g id="cards">
@@ -351,16 +319,6 @@
 <rect x="-134" y="-83" width="21" height="167" class="edge"/>
 <text y="14">ENG-145</text>
 </g>
-<g id="c-t1" data-obj="c-t1" class="card-sm test" style="--hx: 760px; --hy: 1122px;">
-<rect x="-134" y="-83" width="269" height="167" rx="12"/>
-<rect x="-134" y="-83" width="21" height="167" class="edge"/>
-<text y="14">tests</text>
-</g>
-<g id="c-t2" data-obj="c-t2" class="card-sm test" style="--hx: 760px; --hy: 1122px;">
-<rect x="-134" y="-83" width="269" height="167" rx="12"/>
-<rect x="-134" y="-83" width="21" height="167" class="edge"/>
-<text y="14">tests</text>
-</g>
 </g>
 <g id="ballg" data-obj="ball" class="ball" style="--hx: 412px; --hy: 1415px;">
 <image href="img/ball.png" x="-52" y="-52" width="104" height="104"/>
@@ -369,6 +327,7 @@
 <image href="img/ball.png" x="-52" y="-52" width="104" height="104"/>
 </g>
 <g id="labels">
+<text data-obj="beat" x="1999" y="2207" class="beat"></text>
 <text data-obj="lbl-movement" x="2080" y="311" class="hand-lbl orange">Movement</text>
 <text data-obj="lbl-cover" x="945" y="446" class="hand-lbl white">Cover</text>
 <text data-obj="lbl-ai" x="2798" y="604" class="hand-lbl white">AI assistance</text>
@@ -408,9 +367,10 @@
 <span data-obj="kit-swap-a" data-mirror="kits" hidden></span>
 <span data-obj="kit-mark-b" data-mirror="kits" hidden></span>
 <span data-obj="kit-swap-b" data-mirror="kits" hidden></span>
-<span data-obj="cards-at-refine" data-mirror="cards" hidden></span>
+<span data-obj="cards-at-orch" data-mirror="cards" hidden></span>
 <span data-obj="cards-split" data-mirror="cards" hidden></span>
-<span data-obj="cards-at-review" data-mirror="cards" hidden></span>
+<span data-obj="cards-to-test" data-mirror="cards" hidden></span>
+<span data-obj="cards-to-review" data-mirror="cards" hidden></span>
 <span data-obj="cards-pushback" data-mirror="cards" hidden></span>
 <span data-obj="cards-rebuilt" data-mirror="cards" hidden></span>
 <span data-obj="cards-at-ship" data-mirror="cards" hidden></span>
@@ -665,34 +625,29 @@
     <div class="notes">And here is the match: one ticket. Export a report as PDF. Header, page numbers, the same filters as on screen. A normal story, a week of work for one person. First thing the refining agent does: it does not start building. It breaks it into three pieces that can be built at the same time. Layout. Endpoint. Button. Now watch it go onto the pitch.</div>
   </div>
 
-  <div id="s17-agents" class="step" data-x="0" data-y="-10" data-scale="2.25" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach" data-target="3:00">
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship" data-stagger="a-refine|a-build1|a-build2|a-test|a-review|a-ship" data-stagger-ms="500"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf" data-stagger="a-build3|a-test2|a-docs|a-sec|a-perf" data-stagger-ms="500"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back"></div>
-    <div class="notes">Back on the pitch, with the shape from the notebook. Six agents. Then the coach adds players, because agents are cheap and reviewers are not: a third builder, a second tester, docs, and three reviewers with different eyes: review, security, performance. Eleven, the same number as 1974. Now the plan on the grass. Forward: refine to the builders, builders to review, review to ship. Alongside: the testers write tests while the builders build, docs follows build. And the red lines: every reviewer can send it back. That is the pushback. In 1974 it was called cover.</div>
+  <div id="s17-run" class="step" data-x="0" data-y="-10" data-scale="2.25" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch" data-target="4:00">
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch beat" data-beat="One agent reads the ticket"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch beat" data-beat="Ticket in"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 beat" data-beat="It spawns three builders"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split beat" data-beat="Splits the work, builds in parallel"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec beat" data-beat="Spawns a tester and a security reviewer"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec l-b1-t l-b2-t l-b3-s cards-to-test beat" data-beat="Tests run, security looks"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec l-b1-t l-b2-t l-b3-s cards-to-test a-review l-t-r l-s-r cards-to-review beat" data-beat="One reviewer sees everything"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec l-b1-t l-b2-t l-b3-s cards-to-test a-review l-t-r l-s-r cards-to-review l-r-b2 cards-pushback beat" data-beat="Pushback: not good enough"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec l-b1-t l-b2-t l-b3-s cards-to-test a-review l-t-r l-s-r cards-to-review l-r-b2 cards-pushback cards-rebuilt beat" data-beat="Rebuilt, reviewed again"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec l-b1-t l-b2-t l-b3-s cards-to-test a-review l-t-r l-s-r cards-to-review l-r-b2 cards-pushback cards-rebuilt a-ship l-r-sh cards-at-ship beat" data-beat="Ready to ship"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec l-b1-t l-b2-t l-b3-s cards-to-test a-review l-t-r l-s-r cards-to-review l-r-b2 cards-pushback cards-rebuilt a-ship l-r-sh cards-at-ship cards-at-coach beat" data-beat="But not before you have seen it"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach coach-pitch a-orch c-main cards-at-orch a-build1 a-build2 a-build3 l-o-b1 l-o-b2 l-o-b3 c-143 c-144 c-145 cards-split a-test a-sec l-b1-t l-b2-t l-b3-s cards-to-test a-review l-t-r l-s-r cards-to-review l-r-b2 cards-pushback cards-rebuilt a-ship l-r-sh cards-at-ship cards-at-coach cards-done beat" data-beat="Done"></div>
+    <div class="notes">Back on the pitch. Empty. One agent reads the ticket: the orchestrator. It does not build. It decides the shape for this ticket, like the coach with the notebook. It spawns three builders and splits the work, three pieces in parallel. It spawns a tester and a security reviewer; they read the pieces as they arrive. One reviewer sees all of it. And it pushes back: the endpoint is not good enough, go again. Rebuilt, reviewed, ready to ship. And then it comes to the touchline. To you. The agents play fast; the ticket does not cross the line until you have held it. That is the position only a human plays.</div>
   </div>
 
-  <div id="s18-run" class="step" data-x="0" data-y="-10" data-scale="2.25" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back" data-target="3:00">
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt cards-at-ship"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt cards-at-ship cards-at-coach"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt cards-at-ship cards-at-coach cards-done"></div>
-    <div class="notes">Kick-off. The ticket lands on Refine. Refine does not build; it splits: three subtasks go to three builders at the same time, and two test briefs go to the testers, who write the tests while the builders build. Everything converges on Review, with Security and Performance looking from their own angle. Security sends the endpoint back: red. Rebuilt, back to review, green. Ship takes it. And then the ticket comes to the touchline. To you. The agents play fast; the ticket does not cross the line until you have held it. That is the position only a human plays. Done.</div>
-  </div>
-
-  <div id="s19-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">
+  <div id="s18-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">
     <div class="notes">Pull back and look at the whole thing. Where we started, the first program that worked. The 1974 team that changed how football is played. And our four, in their lanes, each excellent at something. The pitch is the same. Stay here for questions.</div>
   </div>
 
 </div>
 
 <script src="vendor/impress.js"></script>
-<script type="module" src="js/director.js?v=2"></script>
+<script type="module" src="js/director.js?v=3"></script>
 </body>
 </html>

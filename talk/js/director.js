@@ -40,6 +40,7 @@ function installSceneWiring() {
   });
   document.addEventListener('impress:stepenter', e => {
     clearStagger();
+    applyBeat(null);
     if (goingBack) {
       revealAllSubsteps(e.target);
       applyScene(poster, currentScene(e.target));
@@ -48,7 +49,7 @@ function installSceneWiring() {
     }
   });
   document.addEventListener('impress:substep:enter', e => enterSubstep(e.detail.substep));
-  document.addEventListener('impress:substep:leave', e => { clearStagger(); applyScene(poster, currentScene(e.target)); });
+  document.addEventListener('impress:substep:leave', e => { clearStagger(); const v = e.target.querySelectorAll('.substep-visible'); applyBeat(v[v.length - 1]); applyScene(poster, currentScene(e.target)); });
 }
 
 let staggerTimers = [];
@@ -58,8 +59,14 @@ function clearStagger() {
   staggerTimers = [];
 }
 
+function applyBeat(el) {
+  const beat = document.querySelector('#pitch .beat');
+  if (beat) beat.textContent = (el && el.dataset.beat) || '';
+}
+
 function enterSubstep(sub) {
   clearStagger();
+  applyBeat(sub);
   const groups = sub.dataset.stagger;
   if (!groups) { applyScene(poster, sceneOf(sub)); return; }
   const shows = groups.split('|').map(g => g.trim().split(/\s+/));
