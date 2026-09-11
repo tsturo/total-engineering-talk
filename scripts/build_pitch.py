@@ -173,7 +173,7 @@ def labels():
 
 
 def mirrors():
-    ids = ["names1974", "word-engineer", "move-suurbier", "cover-neeskens", "support", "mark-1", "wave-1", "mark-2", "wave-2", "mark-3", "wave-3", "four-line"]
+    ids = ["names1974", "word-engineer", "move-suurbier", "cover-neeskens", "support", "mark-1", "wave-1", "mark-2", "wave-2", "mark-3", "wave-3", "four-line", "rotate-all", "rotate-back"]
     balls = ["ball-at-cruyff", "ball-at-fe", "ball-at-be-line", "ball-at-qa-line", "ball-start", "ball-w1", "ball-w2", "ball-w3"]
     ticket_ids = ["ticket-at-be", "ticket-at-qa", "ticket-at-ops", "ticket-at-done"]
     eng_ids = ["eng-mark-fe", "eng-move-fe", "eng-mark-be"]

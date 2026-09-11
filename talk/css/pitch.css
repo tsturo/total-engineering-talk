@@ -385,3 +385,24 @@
 #pitch #kits.on-kit-swap-a [data-obj="k4"].player { --x: 2462px; --y: 1122px; }
 #pitch #kits.on-kit-swap-a [data-obj="k3"].player { --x: 918px; --y: 626px; }
 #pitch #kits.on-kit-swap-b [data-obj="k2"].player { --x: 3386px; --y: 1122px; }
+
+#pitch #players.on-rotate-all [data-obj="p20"].player { --x: 1709px; --y: 719px; }
+#pitch #players.on-rotate-all [data-obj="p6"].player { --x: 2742px; --y: 478px; }
+#pitch #players.on-rotate-all [data-obj="p16"].player { --x: 2937px; --y: 1122px; }
+#pitch #players.on-rotate-all [data-obj="p14"].player { --x: 2742px; --y: 1768px; }
+#pitch #players.on-rotate-all [data-obj="p15"].player { --x: 1709px; --y: 1527px; }
+#pitch #players.on-rotate-all [data-obj="p3"].player { --x: 1000px; --y: 1854px; }
+#pitch #players.on-rotate-all [data-obj="p12"].player { --x: 898px; --y: 1309px; }
+#pitch #players.on-rotate-all [data-obj="p2"].player { --x: 898px; --y: 937px; }
+#pitch #players.on-rotate-all [data-obj="p17"].player { --x: 1582px; --y: 1122px; }
+#pitch #players.on-rotate-all [data-obj="p13"].player { --x: 1000px; --y: 392px; }
+#pitch #players.on-rotate-back [data-obj="p20"].player { --x: 1000px; --y: 392px; }
+#pitch #players.on-rotate-back [data-obj="p17"].player { --x: 898px; --y: 937px; }
+#pitch #players.on-rotate-back [data-obj="p2"].player { --x: 898px; --y: 1309px; }
+#pitch #players.on-rotate-back [data-obj="p12"].player { --x: 1000px; --y: 1854px; }
+#pitch #players.on-rotate-back [data-obj="p6"].player { --x: 1709px; --y: 719px; }
+#pitch #players.on-rotate-back [data-obj="p13"].player { --x: 1582px; --y: 1122px; }
+#pitch #players.on-rotate-back [data-obj="p3"].player { --x: 1709px; --y: 1527px; }
+#pitch #players.on-rotate-back [data-obj="p16"].player { --x: 2742px; --y: 478px; }
+#pitch #players.on-rotate-back [data-obj="p14"].player { --x: 2937px; --y: 1122px; }
+#pitch #players.on-rotate-back [data-obj="p15"].player { --x: 2742px; --y: 1768px; }
