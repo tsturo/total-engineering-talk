@@ -6,7 +6,7 @@
   <title>Total Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Archivo:wght@500;700&display=swap">
-  <link rel="stylesheet" href="css/poster.css?v=3">
+  <link rel="stylesheet" href="css/poster.css?v=4">
   <link rel="stylesheet" href="css/pitch.css?v=4">
 </head>
 <body>
@@ -353,6 +353,30 @@
         <svg class="radar" viewBox="0 0 200 200"><g class="grid"><polygon points="100.0,72.3 124.0,86.1 124.0,113.9 100.0,127.7 76.0,113.9 76.0,86.1"/><polygon points="100.0,44.6 148.0,72.3 148.0,127.7 100.0,155.4 52.0,127.7 52.0,72.3"/><polygon points="100.0,16.0 172.7,58.0 172.7,142.0 100.0,184.0 27.3,142.0 27.3,58.0"/><line x1="100" y1="100" x2="100.0" y2="16.0"/><line x1="100" y1="100" x2="172.7" y2="58.0"/><line x1="100" y1="100" x2="172.7" y2="142.0"/><line x1="100" y1="100" x2="100.0" y2="184.0"/><line x1="100" y1="100" x2="27.3" y2="142.0"/><line x1="100" y1="100" x2="27.3" y2="58.0"/></g><polygon class="shape" points="100.0,26.1 165.5,62.2 166.9,138.6 100.0,176.4 35.3,137.4 32.3,60.9"/></svg>
       </div>
     </div>
+    <img class="place figure" data-obj="notebook" src="img/notebook.png" alt="" style="left: 5250px; top: 1150px; width: 1500px; transform: rotate(-3deg);">
+    <svg class="place strategy" data-obj="strategy" viewBox="0 0 1500 1250" style="left: 5250px; top: 1150px; width: 1500px; height: 1250px; transform: rotate(-3deg);">
+      <g class="nodes">
+        <g data-obj="st-plan" transform="translate(330 300)"><circle r="70"/><text y="12">Plan</text></g>
+        <g data-obj="st-build" transform="translate(560 200)"><circle r="70"/><text y="12">Build</text></g>
+        <g data-obj="st-test" transform="translate(590 470)"><circle r="70"/><text y="12">Test</text></g>
+        <g data-obj="st-review" transform="translate(360 620)"><circle r="70"/><text y="12">Review</text></g>
+        <g data-obj="st-ship" transform="translate(600 800)"><circle r="70"/><text y="12">Ship</text></g>
+      </g>
+      <g class="arrows" data-obj="st-arrows">
+        <path pathLength="1" d="M395 270 L495 225"/>
+        <path pathLength="1" d="M570 270 L585 400"/>
+        <path pathLength="1" d="M530 510 L425 580"/>
+        <path pathLength="1" d="M430 640 L535 760"/>
+        <path pathLength="1" d="M520 470 Q470 330 500 250" class="back"/>
+      </g>
+      <g class="nodes small" data-obj="st-small">
+        <g transform="translate(1000 420)"><circle r="60"/><text y="10">Fix</text></g>
+        <g transform="translate(1000 660)"><circle r="60"/><text y="10">Ship</text></g>
+        <path pathLength="1" d="M1000 485 L1000 595" class="arrow"/>
+      </g>
+      <text data-obj="st-caption" x="1000" y="880" class="caption">one-line fix</text>
+    </svg>
+    <img class="place figure" data-obj="coach" src="img/coach.png" alt="" style="left: 6560px; top: 1980px; width: 420px;">
     <span data-obj="ai-boost" data-mirror="poster" hidden></span>
 
     <div class="place stamp" data-obj="stamp5" style="left: 3900px; top: 1760px;">Does not exist</div>
@@ -468,7 +492,18 @@
     <div class="notes">Now the whole team, each with the tool beside them. Watch: everybody moves, nobody is where they started, and it is still a shape. Then back. Not one super player. Eleven people who can cover for each other, and a tool that makes the first step into somebody else's position cheap.</div>
   </div>
 
-  <div id="s15-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">
+  <div id="s15-coach" class="step" data-x="2500" data-y="-120" data-scale="1.1" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach" data-target="2:00">
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review st-ship"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review st-ship st-arrows"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review st-ship st-arrows st-small st-caption"></div>
+    <div class="notes">Now the other job. Before the ticket comes in, somebody decides the shape. In 1974 that was Michels with a notebook. Today, for a team of agents, that is you. Draw it: one agent plans, one builds, one tests, one reviews, one ships. And the arrows: test fails, back to build. Then a different ticket, a one-line fix: two agents, one arrow. Same team, a different formation, chosen per ticket. You are the coach of this team, and you still play.</div>
+  </div>
+
+  <div id="s16-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">
     <div class="notes">Pull back and look at the whole thing. Where we started, the first program that worked. The 1974 team that changed how football is played. And our four, in their lanes, each excellent at something. The pitch is the same. Stay here for questions.</div>
   </div>
 
