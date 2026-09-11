@@ -238,7 +238,7 @@ def ball():
 def labels():
     return "\n".join([
         '<g id="labels">',
-        f'<text data-obj="beat" x="{CX}" y="{B+S(60)}" class="beat"></text>',
+        f'<text data-obj="beat" class="beat" style="--bx: {CX}px; --by: {B+S(60)}px;"></text>',
         f'<text data-obj="lbl-movement" x="{X(870)}" y="{Y(110)}" class="hand-lbl orange">Movement</text>',
         f'<text data-obj="lbl-cover" x="{X(380)}" y="{Y(170)}" class="hand-lbl white">Cover</text>',
         f'<text data-obj="lbl-ai" x="{X(1180)}" y="{Y(240)}" class="hand-lbl white">AI assistance</text>',

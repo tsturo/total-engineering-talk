@@ -554,9 +554,10 @@
 
 #pitch .beat {
   font-family: var(--font-hand);
-  font-size: 76px;
-  fill: #FFFFFF;
+  font-size: 58px;
+  fill: #FFF3C4;
   stroke: #151515;
-  stroke-width: 14;
+  stroke-width: 12;
   text-anchor: middle;
+  transition: opacity 0.3s ease;
 }

@@ -61,7 +61,13 @@ function clearStagger() {
 
 function applyBeat(el) {
   const beat = document.querySelector('#pitch .beat');
-  if (beat) beat.textContent = (el && el.dataset.beat) || '';
+  if (!beat) return;
+  beat.textContent = (el && el.dataset.beat) || '';
+  if (el && el.dataset.beatX) {
+    beat.setAttribute('x', el.dataset.beatX);
+    beat.setAttribute('y', el.dataset.beatY);
+    beat.style.textAnchor = el.dataset.beatAnchor || 'middle';
+  }
 }
 
 function enterSubstep(sub) {
