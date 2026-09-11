@@ -228,6 +228,39 @@ def cards():
     return "\n".join(out)
 
 
+RUNS = [
+    ("run-1a", "move", (404, 146), (1320, 90)),
+    ("run-1b", "cover", (1156, 184), (1080, 300)),
+    ("run-1c", "cover", (710, 291), (470, 170)),
+    ("run-2a", "move", (655, 470), (1420, 330)),
+    ("run-2b", "cover", (1240, 470), (1280, 560)),
+    ("run-2c", "cover", (710, 650), (720, 520)),
+    ("run-3a", "move", (1156, 184), (840, 320)),
+    ("run-3b", "move", (1156, 757), (780, 810)),
+    ("run-3c", "cover", (1240, 470), (1060, 470)),
+]
+
+
+def wobble(x1, y1, x2, y2):
+    import math
+    dx, dy = x2 - x1, y2 - y1
+    L = math.hypot(dx, dy) or 1
+    nx, ny = -dy / L, dx / L
+    c1 = (x1 + dx * 0.33 + nx * 28, y1 + dy * 0.33 + ny * 28)
+    c2 = (x1 + dx * 0.66 - nx * 28, y1 + dy * 0.66 - ny * 28)
+    return f"M{x1} {y1} C{c1[0]:.0f} {c1[1]:.0f} {c2[0]:.0f} {c2[1]:.0f} {x2} {y2}"
+
+
+def run_arrows():
+    out = ['<g id="runs">']
+    out.append('<defs><marker id="arrow-move" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#F36C21"/></marker>')
+    out.append('<marker id="arrow-cover" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#FFFFFF"/></marker></defs>')
+    for key, kind, (x1, y1), (x2, y2) in RUNS:
+        out.append(f'<path data-obj="{key}" class="run {kind}" pathLength="1" d="{P(wobble(x1, y1, x2, y2))}"/>')
+    out.append('</g>')
+    return "\n".join(out)
+
+
 def ball():
     chain = P(chain_path())
     return "\n".join([
@@ -275,7 +308,7 @@ def fragment():
         '<defs>',
         '<filter id="disc-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/></filter>',
         '</defs>',
-        bands(), trails(), players(), kits(), agent_lines(), agents(), cards(), ball(), labels(),
+        bands(), trails(), run_arrows(), players(), kits(), agent_lines(), agents(), cards(), ball(), labels(),
         '</svg>',
         mirrors(),
         END,

@@ -574,3 +574,26 @@
   stroke: none;
   text-anchor: start;
 }
+
+#pitch .run {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 0.04 0.025;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#pitch .run.on {
+  opacity: 0.95;
+  animation: run-draw 1.3s cubic-bezier(0.45, 0, 0.15, 1) forwards;
+}
+
+@keyframes run-draw {
+  from { stroke-dasharray: 0 1; }
+  to { stroke-dasharray: 0.04 0.025; }
+}
+
+#pitch .run.move { stroke: #F36C21; marker-end: url(#arrow-move); }
+#pitch .run.cover { stroke: #FFFFFF; marker-end: url(#arrow-cover); }
