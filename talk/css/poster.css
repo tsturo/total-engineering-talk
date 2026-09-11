@@ -113,7 +113,7 @@ body.impress-mouse-timeout {
 }
 
 .credits-card {
-  padding: 34px 44px 30px;
+  padding: 56px 72px 52px;
   background: linear-gradient(170deg, #FBF6E4, #F1E8CF);
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
   width: max-content;
@@ -127,22 +127,22 @@ body.impress-mouse-timeout {
 }
 
 .credits .name {
-  font-size: 64px;
+  font-size: 80px;
 }
 
 .credits .place-year {
-  font-size: 40px;
+  font-size: 48px;
   color: #6b5f52;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 .credits .logos {
   position: static;
   display: flex;
   align-items: center;
-  gap: 32px;
-  margin-top: 26px;
-  padding-top: 20px;
+  gap: 44px;
+  margin-top: 36px;
+  padding-top: 30px;
   border-top: 2px dashed rgba(21, 21, 21, 0.25);
   width: max-content;
 }
