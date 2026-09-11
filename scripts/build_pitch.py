@@ -112,44 +112,7 @@ def chain_path():
     return "M" + " L".join(f"{x} {y}" for x, y in pts)
 
 
-def trails():
-    chain = P(chain_path())
-    return "\n".join([
-        '<g id="trails">',
-        f'<path data-obj="chain" class="trail chain" pathLength="1" d="{chain}"/>',
-        f'<path data-obj="trail-move" class="trail move" pathLength="1" d="{P("M404 146 L910 146")}"/>',
-        f'<path data-obj="trail-cover" class="trail cover" pathLength="1" d="{P("M655 470 L470 200")}"/>',
-        '<g data-obj="possibilities" class="possibilities">',
-        f'<path class="dotted" pathLength="1" d="{P("M1240 470 Q1370 300 1500 260")}"/>',
-        f'<path class="dotted" pathLength="1" d="{P("M1240 470 Q1420 480 1550 540")}"/>',
-        f'<path class="dotted" pathLength="1" d="{P("M1240 470 Q1320 700 1480 760")}"/>',
-        '</g>',
-        f'<path data-obj="chosen" class="trail move" pathLength="1" d="{P("M1240 470 Q1370 300 1500 260")}"/>',
-        f'<path data-obj="support-trail" class="trail cover" pathLength="1" d="{P("M1156 184 L1370 200")}"/>',
-        '</g>',
-    ])
-
-
 BALL_ART = '<image href="img/ball.png" x="-52" y="-52" width="104" height="104"/>'
-
-
-KITS = [("k1", 1, 1), ("k2", 4, 2), ("k3", 10, 3), ("k4", 9, 4)]
-
-
-def kits():
-    out = ['<g id="kits">']
-    for key, num, lane in KITS:
-        lx = OLD[0] + (OLD[1] - OLD[0]) / 4 * (lane - 0.5)
-        cls = "player gk" if lane == 1 else "player"
-        out.append(f'<g data-obj="{key}" class="{cls}" style="--hx: {X(lx)}px; --hy: {Y(470)}px;">')
-        out.append(f'<circle r="{S(50)}" class="halo mover"/>')
-        out.append(f'<circle r="{S(50)}" class="halo cover"/>')
-        out.append(f'<path d="{SHORTS}" transform="scale(1.9)" class="shorts"/>')
-        out.append(f'<path d="{SHIRT}" transform="scale(1.9)" class="shirt"/>')
-        out.append(f'<text y="{S(4)}" class="num">{num}</text>')
-        out.append('</g>')
-    out.append('</g>')
-    return "\n".join(out)
 
 
 AGENTS = [
@@ -253,6 +216,7 @@ def wobble(x1, y1, x2, y2):
 
 def run_arrows():
     out = ['<g id="runs">']
+    out.append(f'<path data-obj="chain" class="trail chain" pathLength="1" d="{P(chain_path())}"/>')
     out.append('<defs><marker id="arrow-move" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#E0322B"/></marker>')
     out.append('<marker id="arrow-cover" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2B6BE0"/></marker></defs>')
     for key, kind, (x1, y1), (x2, y2) in RUNS:
@@ -277,26 +241,17 @@ def labels():
     return "\n".join([
         '<g id="labels">',
         '<g data-obj="beat" class="beat"><path class="pointer"/><rect class="paper"/><circle class="pin" r="18"/><text class="beat-text"></text></g>',
-        f'<text data-obj="lbl-movement" x="{X(870)}" y="{Y(110)}" class="hand-lbl orange">Movement</text>',
-        f'<text data-obj="lbl-cover" x="{X(380)}" y="{Y(170)}" class="hand-lbl white">Cover</text>',
-        f'<text data-obj="lbl-ai" x="{X(1180)}" y="{Y(240)}" class="hand-lbl white">AI assistance</text>',
         '</g>',
     ])
 
 
 def mirrors():
-    ids = ["names1974", "word-engineer", "move-suurbier", "cover-neeskens", "support", "mark-1", "wave-1", "mark-2", "wave-2", "mark-3", "wave-3", "four-line", "rotate-all", "rotate-back", "ai-ring"]
-    balls = ["ball-at-cruyff", "ball-at-fe", "ball-at-be-line", "ball-at-qa-line", "ball-start", "ball-w1", "ball-w2", "ball-w3"]
-    ticket_ids = ["ticket-at-be", "ticket-at-qa", "ticket-at-ops", "ticket-at-done"]
-    eng_ids = ["eng-mark-fe", "eng-move-fe", "eng-mark-be"]
-    kit_ids = ["kit-mark-a", "kit-swap-a", "kit-mark-b", "kit-swap-b"]
-    card_states = ["at-orch", "split", "to-test", "to-review", "pushback", "rebuilt", "at-ship", "at-coach", "done"]
+    ids = ["names1974", "mark-1", "wave-1", "mark-2", "wave-2", "mark-3", "wave-3", "rotate-all", "rotate-back", "ai-ring"]
+    balls = ["ball-start", "ball-w1", "ball-w2", "ball-w3"]
+    card_states = ["at-orch", "split", "to-test", "to-review", "pushback", "rebuilt", "at-ship", "done"]
     out_cards = [f'<span data-obj="cards-{i}" data-mirror="cards" hidden></span>' for i in card_states]
     out = [f'<span data-obj="{i}" data-mirror="players" hidden></span>' for i in ids]
     out += [f'<span data-obj="{i}" data-mirror="ballg" hidden></span>' for i in balls]
-    out += [f'<span data-obj="{i}" data-mirror="ticketg" hidden></span>' for i in ticket_ids]
-    out += [f'<span data-obj="{i}" data-mirror="engs" hidden></span>' for i in eng_ids]
-    out += [f'<span data-obj="{i}" data-mirror="kits" hidden></span>' for i in kit_ids]
     out += out_cards
     return "\n".join(out)
 
@@ -308,7 +263,7 @@ def fragment():
         '<defs>',
         '<filter id="disc-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/></filter>',
         '</defs>',
-        bands(), trails(), run_arrows(), players(), kits(), agent_lines(), agents(), cards(), ball(), labels(),
+        bands(), run_arrows(), players(), agent_lines(), agents(), cards(), ball(), labels(),
         '</svg>',
         mirrors(),
         END,

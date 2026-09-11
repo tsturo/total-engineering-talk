@@ -116,8 +116,7 @@
   fill: #FFFFFF;
 }
 
-#pitch .player .name,
-#pitch .player .role {
+#pitch .player .name {
   font-family: var(--font-text);
   font-weight: 700;
   font-size: 62px;
@@ -130,31 +129,6 @@
 
 #players.on-names1974 .name {
   opacity: 1;
-}
-
-#players.on-word-engineer .role {
-  opacity: 1;
-}
-
-#players.on-move-suurbier [data-obj="p20"] {
-  --x: 2172px;
-  --y: 392px;
-}
-
-#players.on-move-suurbier [data-obj="p20"] .halo.mover,
-#players.on-cover-neeskens [data-obj="p13"] .halo.cover,
-#players.on-support [data-obj="p16"] .halo.cover {
-  opacity: 1;
-}
-
-#players.on-cover-neeskens [data-obj="p13"] {
-  --x: 1153px;
-  --y: 514px;
-}
-
-#players.on-support [data-obj="p16"] {
-  --x: 3238px;
-  --y: 514px;
 }
 
 #pitch .ball {
@@ -177,79 +151,6 @@
 
 #pitch g#ball-flight.ball > * {
   transform: scale(1.5);
-}
-
-#ballg.on-ball-at-cruyff {
-  --x: 3585px;
-  --y: 1032px;
-}
-
-#ballg.on-ball-at-fe {
-  --x: 412px;
-  --y: 1415px;
-}
-
-#ballg.on-ball-at-be-line {
-  --x: 1033px;
-  --y: 1415px;
-}
-
-#ballg.on-ball-at-qa-line {
-  --x: 1955px;
-  --y: 1415px;
-}
-
-#pitch .trail {
-  fill: none;
-  stroke-width: 21;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  transition: stroke-dashoffset 1.2s cubic-bezier(0.45, 0, 0.15, 1), opacity 0.3s ease;
-}
-
-#pitch .trail.on {
-  stroke-dashoffset: 0;
-}
-
-#pitch .trail.chain {
-  stroke: #FFFFFF;
-  stroke-width: 14;
-  transition-duration: 6s;
-  transition-timing-function: linear;
-}
-
-#pitch .trail.move {
-  stroke: #F36C21;
-}
-
-#pitch .trail.cover {
-  stroke: #FFFFFF;
-}
-
-#pitch .possibilities .dotted {
-  fill: none;
-  stroke: #F36C21;
-  stroke-opacity: 0.6;
-  stroke-width: 12;
-  stroke-dasharray: 0.02 0.02;
-  stroke-linecap: round;
-}
-
-#pitch .hand-lbl {
-  font-family: var(--font-hand);
-  font-size: 106px;
-  stroke: #151515;
-  stroke-width: 18;
-}
-
-#pitch .hand-lbl.orange {
-  fill: #F36C21;
-}
-
-#pitch .hand-lbl.white {
-  fill: #FFFFFF;
 }
 
 
@@ -367,68 +268,7 @@
   transition: transform 1.2s cubic-bezier(0.45, 0, 0.15, 1), opacity 0.4s ease;
 }
 
-#players.on-four-line .num {
-  opacity: 0;
-}
 
-#players.on-four-line .halo {
-  opacity: 0 !important;
-}
-
-#players.on-four-line [data-obj="p8"] {
-  --x: 412px;
-  --y: 1122px;
-}
-
-#players.on-four-line [data-obj="p2"] {
-  --x: 1269px;
-  --y: 1122px;
-}
-
-#players.on-four-line [data-obj="p3"] {
-  --x: 2149px;
-  --y: 1122px;
-}
-
-#players.on-four-line [data-obj="p14"] {
-  --x: 3076px;
-  --y: 1122px;
-}
-
-#players.on-four-line .num,
-#players.on-four-line .halo {
-  opacity: 0 !important;
-}
-
-#players.on-four-line [data-obj="p8"] {
-  --x: 412px;
-  --y: 1122px;
-}
-
-#players.on-four-line [data-obj="p2"] {
-  --x: 1269px;
-  --y: 1122px;
-}
-
-#players.on-four-line [data-obj="p3"] {
-  --x: 2149px;
-  --y: 1122px;
-}
-
-#players.on-four-line [data-obj="p14"] {
-  --x: 3076px;
-  --y: 1122px;
-}
-
-#pitch #kits.on-kit-mark-a [data-obj="k4"] .halo.mover,
-#pitch #kits.on-kit-mark-a [data-obj="k3"] .halo.cover,
-#pitch #kits.on-kit-mark-b [data-obj="k2"] .halo.mover {
-  opacity: 1;
-}
-
-#pitch #kits.on-kit-swap-a [data-obj="k4"].player { --x: 2462px; --y: 1122px; }
-#pitch #kits.on-kit-swap-a [data-obj="k3"].player { --x: 918px; --y: 626px; }
-#pitch #kits.on-kit-swap-b [data-obj="k2"].player { --x: 3386px; --y: 1122px; }
 
 #pitch #players.on-rotate-all [data-obj="p20"].player { --x: 1709px; --y: 719px; }
 #pitch #players.on-rotate-all [data-obj="p6"].player { --x: 2742px; --y: 478px; }
@@ -543,8 +383,6 @@
 
 #cards.on-cards-at-ship #c-143, #cards.on-cards-at-ship #c-144, #cards.on-cards-at-ship #c-145 { opacity: 0; }
 #cards.on-cards-at-ship #c-main { opacity: 1; --x: 3493px; --y: 827px; }
-
-#cards.on-cards-at-coach #c-main { --x: 690px; --y: 1560px; }
 #cards.on-cards-done #c-main rect.edge { fill: #3BB143; }
 
 #pitch .beat {

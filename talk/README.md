@@ -47,3 +47,7 @@ npx decktape impress "http://localhost:8000/talk/?print" talk.pdf -s 1920x1080 -
 2. Test at a 16:10 window size as well as 16:9.
 3. Test the real clicker on a key logger page first; add any unexpected key in `js/director.js`.
 4. Click through forward and backward once; every backward click must restore the previous picture.
+
+## Source images
+
+The generated source images (full-size player, coach, ground and screenshot renders) live in `assets/` at the project root. They are not tracked in git because of their size; `talk/img/` holds the copies the talk uses.
