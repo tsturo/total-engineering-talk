@@ -152,6 +152,29 @@ def kits():
     return "\n".join(out)
 
 
+AGENTS = [
+    ("a-refine", "Refine", 330, 470),
+    ("a-build1", "Build", 700, 260),
+    ("a-build2", "Build", 700, 680),
+    ("a-test", "Test", 900, 470),
+    ("a-review", "Review", 1150, 470),
+    ("a-ship", "Ship", 1450, 470),
+]
+
+
+def agents():
+    out = ['<g id="agents">']
+    for key, label, x, y in AGENTS:
+        out.append(f'<g data-obj="{key}" class="agent" style="--hx: {X(x)}px; --hy: {Y(y)}px;">')
+        out.append(f'<circle r="{S(50)}" class="halo mover"/>')
+        out.append(f'<circle r="{S(40)}" class="disc"/>')
+        out.append(f'<g class="ai-badge" transform="translate({S(30)} {S(-34)})"><circle r="{S(16)}"/><text y="{S(6)}">AI</text></g>')
+        out.append(f'<text y="{S(78)}" class="role">{label}</text>')
+        out.append('</g>')
+    out.append('</g>')
+    return "\n".join(out)
+
+
 def ball():
     chain = P(chain_path())
     return "\n".join([
@@ -195,7 +218,7 @@ def fragment():
         '<defs>',
         '<filter id="disc-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/></filter>',
         '</defs>',
-        bands(), trails(), players(), kits(), ball(), labels(),
+        bands(), trails(), players(), kits(), agents(), ball(), labels(),
         '</svg>',
         mirrors(),
         END,
