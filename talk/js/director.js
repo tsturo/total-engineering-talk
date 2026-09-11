@@ -1,5 +1,3 @@
-import { parseScene, applyScene } from './scene.js';
-
 const poster = document.getElementById('poster');
 const NAV_KEYS = new Set(['PageDown', 'PageUp', 'ArrowLeft', 'ArrowRight', ' ', 'ArrowUp', 'ArrowDown']);
 const SUPPRESSED_KEYS = new Set(['F5', 'Escape']);

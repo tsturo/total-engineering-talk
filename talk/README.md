@@ -4,13 +4,15 @@ One poster, a linear camera tour, driven by a clicker. Built on impress.js 2.0.0
 
 ## Run
 
-From the project root:
+Double-click `index.html`, or drag it into Chrome. No server needed.
+
+A local server is only needed for the speaker console (`P`), which Chrome blocks from file URLs:
 
 ```
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000/talk/ in Chrome. A local server is required for the speaker console; opening the file directly does not work.
+then open http://localhost:8000/talk/.
 
 ## Keys
 

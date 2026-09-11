@@ -1,4 +1,4 @@
-export function parseScene(text) {
+function parseScene(text) {
   const ids = new Set();
   for (const token of (text || '').trim().split(/\s+/)) {
     if (!token) continue;
@@ -8,7 +8,7 @@ export function parseScene(text) {
   return ids;
 }
 
-export function applyScene(root, ids) {
+function applyScene(root, ids) {
   for (const el of root.querySelectorAll('[data-obj]')) {
     el.classList.toggle('on', ids.has(el.dataset.obj));
   }
@@ -21,3 +21,6 @@ function mirrorStates(root) {
     if (target) target.classList.toggle('on-' + el.dataset.obj, el.classList.contains('on'));
   }
 }
+
+window.parseScene = parseScene;
+window.applyScene = applyScene;

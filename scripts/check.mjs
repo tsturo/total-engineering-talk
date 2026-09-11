@@ -1,5 +1,7 @@
 import { readFileSync } from 'node:fs';
-import { parseScene } from '../talk/js/scene.js';
+import { createRequire } from 'node:module';
+const sceneSrc = readFileSync(new URL('../talk/js/scene.js', import.meta.url), 'utf8');
+const parseScene = new Function('window', sceneSrc + '; return parseScene;')({});
 
 const html = readFileSync(new URL('../talk/index.html', import.meta.url), 'utf8');
 const objIds = new Set([...html.matchAll(/data-obj="([^"]+)"/g)].map(m => m[1]));
