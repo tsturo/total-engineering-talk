@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Archivo:wght@500;700&display=swap">
   <link rel="stylesheet" href="css/poster.css?v=7">
-  <link rel="stylesheet" href="css/pitch.css?v=6">
+  <link rel="stylesheet" href="css/pitch.css?v=9">
 </head>
 <body>
 <div id="impress"
@@ -330,6 +330,38 @@
 <text y="181" class="role">Performance</text>
 </g>
 </g>
+<g id="cards">
+<g id="c-main" data-obj="c-main" class="card-sm main" style="--hx: 760px; --hy: 1122px;">
+<rect x="-134" y="-83" width="269" height="167" rx="12"/>
+<rect x="-134" y="-83" width="21" height="167" class="edge"/>
+<text y="14">ENG-142</text>
+</g>
+<g id="c-143" data-obj="c-143" class="card-sm sub" style="--hx: 760px; --hy: 1122px;">
+<rect x="-134" y="-83" width="269" height="167" rx="12"/>
+<rect x="-134" y="-83" width="21" height="167" class="edge"/>
+<text y="14">ENG-143</text>
+</g>
+<g id="c-144" data-obj="c-144" class="card-sm sub" style="--hx: 760px; --hy: 1122px;">
+<rect x="-134" y="-83" width="269" height="167" rx="12"/>
+<rect x="-134" y="-83" width="21" height="167" class="edge"/>
+<text y="14">ENG-144</text>
+</g>
+<g id="c-145" data-obj="c-145" class="card-sm sub" style="--hx: 760px; --hy: 1122px;">
+<rect x="-134" y="-83" width="269" height="167" rx="12"/>
+<rect x="-134" y="-83" width="21" height="167" class="edge"/>
+<text y="14">ENG-145</text>
+</g>
+<g id="c-t1" data-obj="c-t1" class="card-sm test" style="--hx: 760px; --hy: 1122px;">
+<rect x="-134" y="-83" width="269" height="167" rx="12"/>
+<rect x="-134" y="-83" width="21" height="167" class="edge"/>
+<text y="14">tests</text>
+</g>
+<g id="c-t2" data-obj="c-t2" class="card-sm test" style="--hx: 760px; --hy: 1122px;">
+<rect x="-134" y="-83" width="269" height="167" rx="12"/>
+<rect x="-134" y="-83" width="21" height="167" class="edge"/>
+<text y="14">tests</text>
+</g>
+</g>
 <g id="ballg" data-obj="ball" class="ball" style="--hx: 412px; --hy: 1415px;">
 <image href="img/ball.png" x="-52" y="-52" width="104" height="104"/>
 </g>
@@ -376,6 +408,14 @@
 <span data-obj="kit-swap-a" data-mirror="kits" hidden></span>
 <span data-obj="kit-mark-b" data-mirror="kits" hidden></span>
 <span data-obj="kit-swap-b" data-mirror="kits" hidden></span>
+<span data-obj="cards-at-refine" data-mirror="cards" hidden></span>
+<span data-obj="cards-split" data-mirror="cards" hidden></span>
+<span data-obj="cards-at-review" data-mirror="cards" hidden></span>
+<span data-obj="cards-pushback" data-mirror="cards" hidden></span>
+<span data-obj="cards-rebuilt" data-mirror="cards" hidden></span>
+<span data-obj="cards-at-ship" data-mirror="cards" hidden></span>
+<span data-obj="cards-at-coach" data-mirror="cards" hidden></span>
+<span data-obj="cards-done" data-mirror="cards" hidden></span>
 <!-- pitch:end -->
 
     <img class="place figure" data-obj="fig1" src="img/player1.png?v=2" alt="" style="left: 1846px; top: 1612px; width: 540px;">
@@ -498,6 +538,7 @@
       </ul>
       <div class="ticket-foot"><span class="status">To do</span></div>
     </div>
+    <img class="place figure" data-obj="coach-pitch" src="img/coach.png?v=4" alt="" style="left: 4780px; top: 2860px; width: 480px;">
     <span data-obj="ai-boost" data-mirror="poster" hidden></span>
 
     <div class="place stamp" data-obj="stamp5" style="left: 3900px; top: 1760px;">Does not exist</div>
@@ -633,7 +674,19 @@
     <div class="notes">Back on the pitch, with the shape from the notebook. Six agents. Then the coach adds players, because agents are cheap and reviewers are not: a third builder, a second tester, docs, and three reviewers with different eyes: review, security, performance. Eleven, the same number as 1974. Now the plan on the grass. Forward: refine to the builders, builders to review, review to ship. Alongside: the testers write tests while the builders build, docs follows build. And the red lines: every reviewer can send it back. That is the pushback. In 1974 it was called cover.</div>
   </div>
 
-  <div id="s18-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">
+  <div id="s18-run" class="step" data-x="0" data-y="-10" data-scale="2.25" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back" data-target="3:00">
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt cards-at-ship"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt cards-at-ship cards-at-coach"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back coach-pitch c-main c-143 c-144 c-145 c-t1 c-t2 cards-at-refine cards-split cards-at-review cards-pushback cards-rebuilt cards-at-ship cards-at-coach cards-done"></div>
+    <div class="notes">Kick-off. The ticket lands on Refine. Refine does not build; it splits: three subtasks go to three builders at the same time, and two test briefs go to the testers, who write the tests while the builders build. Everything converges on Review, with Security and Performance looking from their own angle. Security sends the endpoint back: red. Rebuilt, back to review, green. Ship takes it. And then the ticket comes to the touchline. To you. The agents play fast; the ticket does not cross the line until you have held it. That is the position only a human plays. Done.</div>
+  </div>
+
+  <div id="s19-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">
     <div class="notes">Pull back and look at the whole thing. Where we started, the first program that worked. The 1974 team that changed how football is played. And our four, in their lanes, each excellent at something. The pitch is the same. Stay here for questions.</div>
   </div>
 

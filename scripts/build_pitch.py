@@ -216,6 +216,30 @@ def agent_lines():
     return "\n".join(out)
 
 
+CARDS = [
+    ("c-main", "ENG-142", "main"),
+    ("c-143", "ENG-143", "sub"),
+    ("c-144", "ENG-144", "sub"),
+    ("c-145", "ENG-145", "sub"),
+    ("c-t1", "tests", "test"),
+    ("c-t2", "tests", "test"),
+]
+
+
+def cards():
+    pos = {k: (x, y) for k, _, x, y in AGENTS}
+    rx, ry = pos["a-refine"]
+    out = ['<g id="cards">']
+    for key, label, kind in CARDS:
+        out.append(f'<g id="{key}" data-obj="{key}" class="card-sm {kind}" style="--hx: {X(rx)}px; --hy: {Y(ry)}px;">')
+        out.append(f'<rect x="{S(-58)}" y="{S(-36)}" width="{S(116)}" height="{S(72)}" rx="{S(5)}"/>')
+        out.append(f'<rect x="{S(-58)}" y="{S(-36)}" width="{S(9)}" height="{S(72)}" class="edge"/>')
+        out.append(f'<text y="{S(6)}">{label}</text>')
+        out.append('</g>')
+    out.append('</g>')
+    return "\n".join(out)
+
+
 def ball():
     chain = P(chain_path())
     return "\n".join([
@@ -244,11 +268,14 @@ def mirrors():
     ticket_ids = ["ticket-at-be", "ticket-at-qa", "ticket-at-ops", "ticket-at-done"]
     eng_ids = ["eng-mark-fe", "eng-move-fe", "eng-mark-be"]
     kit_ids = ["kit-mark-a", "kit-swap-a", "kit-mark-b", "kit-swap-b"]
+    card_states = ["at-refine", "split", "at-review", "pushback", "rebuilt", "at-ship", "at-coach", "done"]
+    out_cards = [f'<span data-obj="cards-{i}" data-mirror="cards" hidden></span>' for i in card_states]
     out = [f'<span data-obj="{i}" data-mirror="players" hidden></span>' for i in ids]
     out += [f'<span data-obj="{i}" data-mirror="ballg" hidden></span>' for i in balls]
     out += [f'<span data-obj="{i}" data-mirror="ticketg" hidden></span>' for i in ticket_ids]
     out += [f'<span data-obj="{i}" data-mirror="engs" hidden></span>' for i in eng_ids]
     out += [f'<span data-obj="{i}" data-mirror="kits" hidden></span>' for i in kit_ids]
+    out += out_cards
     return "\n".join(out)
 
 
@@ -259,7 +286,7 @@ def fragment():
         '<defs>',
         '<filter id="disc-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/></filter>',
         '</defs>',
-        bands(), trails(), players(), kits(), agent_lines(), agents(), ball(), labels(),
+        bands(), trails(), players(), kits(), agent_lines(), agents(), cards(), ball(), labels(),
         '</svg>',
         mirrors(),
         END,
