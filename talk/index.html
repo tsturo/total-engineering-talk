@@ -6,7 +6,7 @@
   <title>Total Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Archivo:wght@500;700&display=swap">
-  <link rel="stylesheet" href="css/poster.css?v=4">
+  <link rel="stylesheet" href="css/poster.css?v=6">
   <link rel="stylesheet" href="css/pitch.css?v=4">
 </head>
 <body>
@@ -355,28 +355,50 @@
     </div>
     <img class="place figure" data-obj="notebook" src="img/notebook.png" alt="" style="left: 3200px; top: 3150px; width: 1500px; transform: rotate(-3deg);">
     <svg class="place strategy" data-obj="strategy" viewBox="0 0 1500 1250" style="left: 3200px; top: 3150px; width: 1500px; height: 1250px; transform: rotate(-3deg);">
-      <g class="nodes">
-        <g data-obj="st-plan" transform="translate(340 420)"><circle r="70"/><text y="12">Plan</text></g>
-        <g data-obj="st-build" transform="translate(560 330)"><circle r="70"/><text y="12">Build</text></g>
-        <g data-obj="st-test" transform="translate(600 600)"><circle r="70"/><text y="12">Test</text></g>
-        <g data-obj="st-review" transform="translate(370 760)"><circle r="70"/><text y="12">Review</text></g>
-        <g data-obj="st-ship" transform="translate(600 930)"><circle r="70"/><text y="12">Ship</text></g>
+      <g class="football" data-obj="fb" transform="translate(300 330) scale(0.78)">
+        <g data-obj="fb-pitch" class="fb-pitch">
+          <rect x="0" y="0" width="500" height="760" rx="6"/>
+          <line x1="0" y1="380" x2="500" y2="380"/>
+          <circle cx="250" cy="380" r="80"/>
+          <rect x="100" y="0" width="300" height="120"/>
+          <rect x="100" y="640" width="300" height="120"/>
+        </g>
+        <g data-obj="fb-players" class="fb-players">
+          <text x="250" y="735">X</text>
+          <text x="130" y="630">X</text><text x="370" y="630">X</text>
+          <text x="80" y="450">X</text><text x="250" y="490">X</text><text x="420" y="450">X</text>
+          <text x="130" y="270">X</text><text x="370" y="270">X</text>
+          <circle cx="250" cy="310" r="14" class="ball"/>
+        </g>
+        <g data-obj="fb-arrows" class="fb-arrows">
+          <path pathLength="1" d="M80 440 C 50 310 80 180 150 130" class="run"/>
+          <path pathLength="1" d="M370 440 C 310 390 250 390 220 450" class="cover"/>
+          <path pathLength="1" d="M250 310 C 270 220 310 170 360 130" class="pass"/>
+          <path pathLength="1" d="M430 440 C 450 310 450 210 390 150" class="run"/>
+        </g>
       </g>
-      <g class="arrows" data-obj="st-arrows">
-        <path pathLength="1" d="M405 395 L495 358"/>
-        <path pathLength="1" d="M575 400 L595 530"/>
-        <path pathLength="1" d="M545 645 L430 720"/>
-        <path pathLength="1" d="M430 810 L545 885"/>
-        <path pathLength="1" d="M535 590 Q470 460 505 380" class="back"/>
+      <g class="nodes" transform="translate(560 0)">
+        <g data-obj="st-plan" transform="translate(340 380)"><circle r="62"/><text y="10">Plan</text></g>
+        <g data-obj="st-build" transform="translate(560 300)"><circle r="62"/><text y="10">Build</text></g>
+        <g data-obj="st-test" transform="translate(590 540)"><circle r="62"/><text y="10">Test</text></g>
+        <g data-obj="st-review" transform="translate(370 680)"><circle r="62"/><text y="10">Review</text></g>
+        <g data-obj="st-ship" transform="translate(590 830)"><circle r="62"/><text y="10">Ship</text></g>
       </g>
-      <g class="nodes small" data-obj="st-small">
-        <g transform="translate(1030 520)"><circle r="60"/><text y="10">Fix</text></g>
-        <g transform="translate(1030 760)"><circle r="60"/><text y="10">Ship</text></g>
-        <path pathLength="1" d="M1030 585 L1030 695" class="arrow"/>
+      <g class="arrows" data-obj="st-arrows" transform="translate(560 0)">
+        <path pathLength="1" d="M398 358 L502 320"/>
+        <path pathLength="1" d="M568 362 L582 478"/>
+        <path pathLength="1" d="M540 580 L422 650"/>
+        <path pathLength="1" d="M420 728 L545 790"/>
+        <path pathLength="1" d="M535 520 Q470 400 505 345" class="back"/>
       </g>
-      <text data-obj="st-caption" x="1030" y="900" class="caption">one-line fix</text>
+      <g class="nodes small" data-obj="st-small" transform="translate(560 0)">
+        <g transform="translate(330 900)"><circle r="46"/><text y="8">Fix</text></g>
+        <g transform="translate(330 1060)"><circle r="46"/><text y="8">Ship</text></g>
+        <path pathLength="1" d="M330 950 L330 1010" class="arrow"/>
+      </g>
+      <text data-obj="st-caption" x="1060" y="990" class="caption">one-line fix</text>
     </svg>
-    <img class="place figure" data-obj="coach" src="img/coach.png" alt="" style="left: 4780px; top: 3480px; width: 520px;">
+    <img class="place figure" data-obj="coach" src="img/coach.png" alt="" style="left: 4640px; top: 3600px; width: 500px;">
     <span data-obj="ai-boost" data-mirror="poster" hidden></span>
 
     <div class="place stamp" data-obj="stamp5" style="left: 3900px; top: 1760px;">Does not exist</div>
@@ -492,15 +514,18 @@
     <div class="notes">Now the whole team, each with the tool beside them. Watch: everybody moves, nobody is where they started, and it is still a shape. Then back. Not one super player. Eleven people who can cover for each other, and a tool that makes the first step into somebody else's position cheap.</div>
   </div>
 
-  <div id="s15-coach" class="step" data-x="650" data-y="1800" data-scale="1.15" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach" data-target="2:00">
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review st-ship"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review st-ship st-arrows"></div>
-    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy st-plan st-build st-test st-review st-ship st-arrows st-small st-caption"></div>
-    <div class="notes">Now the other job. Before the ticket comes in, somebody decides the shape. In 1974 that was Michels with a notebook. Today, for a team of agents, that is you. Draw it: one agent plans, one builds, one tests, one reviews, one ships. And the arrows: test fails, back to build. Then a different ticket, a one-line fix: two agents, one arrow. Same team, a different formation, chosen per ticket. You are the coach of this team, and you still play.</div>
+  <div id="s15-coach" class="step" data-x="650" data-y="1800" data-scale="1.15" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach" data-target="2:30">
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows st-plan"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows st-plan st-build"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows st-plan st-build st-test"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows st-plan st-build st-test st-review"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows st-plan st-build st-test st-review st-ship"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows st-plan st-build st-test st-review st-ship st-arrows"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach strategy fb fb-pitch fb-players fb-arrows st-plan st-build st-test st-review st-ship st-arrows st-small st-caption"></div>
+    <div class="notes">Now the other job. Before the match, somebody decides the shape. Michels did it with a notebook: the pitch, the crosses, the arrows. This one runs, that one covers, the ball goes there. Now the facing page. For a team of agents, the coach is you. Draw it: one agent plans, one builds, one tests, one reviews, one ships. And the arrows: test fails, back to build. Then a different ticket, a one-line fix: two agents, one arrow. Same team, a different formation, chosen per ticket. You are the coach of this team, and you still play.</div>
   </div>
 
   <div id="s16-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">

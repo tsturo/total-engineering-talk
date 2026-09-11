@@ -489,17 +489,17 @@ body.impress-mouse-timeout {
 .strategy .nodes text {
   text-anchor: middle;
   font-family: var(--font-hand);
-  font-size: 44px;
+  font-size: 40px;
   fill: #1d3f8a;
 }
 
 .strategy .nodes.small circle { stroke: #C1272D; }
-.strategy .nodes.small text { fill: #C1272D; font-size: 38px; }
+.strategy .nodes.small text { fill: #C1272D; font-size: 30px; }
 
 .strategy .caption {
   text-anchor: middle;
   font-family: var(--font-hand);
-  font-size: 40px;
+  font-size: 32px;
   fill: #C1272D;
 }
 
@@ -528,3 +528,42 @@ body.impress-mouse-timeout {
 .strategy [data-obj] {
   transition: opacity 0.45s ease;
 }
+
+.strategy .fb-pitch rect,
+.strategy .fb-pitch line,
+.strategy .fb-pitch circle {
+  fill: none;
+  stroke: #1d3f8a;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.strategy .fb-players text {
+  text-anchor: middle;
+  font-family: var(--font-hand);
+  font-size: 54px;
+  fill: #1d3f8a;
+}
+
+.strategy .fb-players .ball {
+  fill: #C1272D;
+}
+
+.strategy .fb-arrows path {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.strategy .fb-arrows .run { stroke: #C1272D; }
+.strategy .fb-arrows .cover { stroke: #1d3f8a; stroke-dasharray: 0.06 0.04; }
+.strategy .fb-arrows .pass { stroke: #C1272D; stroke-dasharray: 0.04 0.03; }
+
+.strategy .fb-arrows.on path { stroke-dashoffset: 0; }
+.strategy .fb-arrows.on path:nth-child(1) { transition-delay: 0s; }
+.strategy .fb-arrows.on path:nth-child(2) { transition-delay: 0.5s; }
+.strategy .fb-arrows.on path:nth-child(3) { transition-delay: 1s; }
+.strategy .fb-arrows.on path:nth-child(4) { transition-delay: 1.5s; }
