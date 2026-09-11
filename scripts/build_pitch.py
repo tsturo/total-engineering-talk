@@ -84,6 +84,7 @@ def players():
         out.append(f'<g data-obj="{key}" class="{cls}" style="--hx: {X(x)}px; --hy: {Y(y)}px;">')
         out.append(f'<circle r="{S(50)}" class="halo mover"/>')
         out.append(f'<circle r="{S(50)}" class="halo cover"/>')
+        out.append(f'<circle r="{S(56)}" class="halo ai"/>')
         out.append(f'<path d="{SHORTS}" transform="scale(1.9)" class="shorts"/>')
         out.append(f'<path d="{SHIRT}" transform="scale(1.9)" class="shirt"/>')
         out.append(f'<text y="{S(4)}" class="num">{num}</text>')
@@ -173,7 +174,7 @@ def labels():
 
 
 def mirrors():
-    ids = ["names1974", "word-engineer", "move-suurbier", "cover-neeskens", "support", "mark-1", "wave-1", "mark-2", "wave-2", "mark-3", "wave-3", "four-line", "rotate-all", "rotate-back"]
+    ids = ["names1974", "word-engineer", "move-suurbier", "cover-neeskens", "support", "mark-1", "wave-1", "mark-2", "wave-2", "mark-3", "wave-3", "four-line", "rotate-all", "rotate-back", "ai-ring"]
     balls = ["ball-at-cruyff", "ball-at-fe", "ball-at-be-line", "ball-at-qa-line", "ball-start", "ball-w1", "ball-w2", "ball-w3"]
     ticket_ids = ["ticket-at-be", "ticket-at-qa", "ticket-at-ops", "ticket-at-done"]
     eng_ids = ["eng-mark-fe", "eng-move-fe", "eng-mark-be"]
