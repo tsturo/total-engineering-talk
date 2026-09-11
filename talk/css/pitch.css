@@ -553,11 +553,35 @@
 #cards.on-cards-done #c-main rect.edge { fill: #3BB143; }
 
 #pitch .beat {
-  font-family: var(--font-hand);
-  font-size: 58px;
-  fill: #FFF3C4;
-  stroke: #151515;
-  stroke-width: 12;
-  text-anchor: middle;
   transition: opacity 0.3s ease;
+}
+
+#pitch .beat .paper {
+  fill: #FBF6E4;
+  stroke: #151515;
+  stroke-width: 3;
+  filter: url(#disc-shadow);
+}
+
+#pitch .beat .pin {
+  fill: #F36C21;
+  stroke: #151515;
+  stroke-width: 3;
+}
+
+#pitch .beat .pointer {
+  fill: none;
+  stroke: #FBF6E4;
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-dasharray: 22 16;
+  filter: url(#disc-shadow);
+}
+
+#pitch .beat .beat-text {
+  font-family: var(--font-hand);
+  font-size: 60px;
+  fill: #151515;
+  stroke: none;
+  text-anchor: start;
 }

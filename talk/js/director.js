@@ -62,12 +62,27 @@ function clearStagger() {
 function applyBeat(el) {
   const beat = document.querySelector('#pitch .beat');
   if (!beat) return;
-  beat.textContent = (el && el.dataset.beat) || '';
-  if (el && el.dataset.beatX) {
-    beat.setAttribute('x', el.dataset.beatX);
-    beat.setAttribute('y', el.dataset.beatY);
-    beat.style.textAnchor = el.dataset.beatAnchor || 'middle';
-  }
+  const text = beat.querySelector('.beat-text');
+  const paper = beat.querySelector('.paper');
+  const pin = beat.querySelector('.pin');
+  const pointer = beat.querySelector('.pointer');
+  const label = (el && el.dataset.beat) || '';
+  text.textContent = label;
+  if (!el || !el.dataset.beatX) return;
+  const ax = Number(el.dataset.beatX), ay = Number(el.dataset.beatY);
+  const side = el.dataset.beatSide || 'above';
+  const pad = 40, h = 120;
+  text.setAttribute('x', 0); text.setAttribute('y', 0);
+  const w = text.getBBox().width + pad * 2;
+  const offsets = { above: [-w / 2, -h - 190], below: [-w / 2, 230], left: [-w - 190, -h / 2], right: [190, -h / 2] };
+  const [dx, dy] = offsets[side] || offsets.above;
+  const x = ax + dx, y = ay + dy;
+  paper.setAttribute('x', x); paper.setAttribute('y', y); paper.setAttribute('width', w); paper.setAttribute('height', h); paper.setAttribute('rx', 6);
+  text.setAttribute('x', x + pad); text.setAttribute('y', y + h * 0.68);
+  pin.setAttribute('cx', x + w / 2); pin.setAttribute('cy', y);
+  const anchors = { above: [x + w / 2, y + h], below: [x + w / 2, y], left: [x + w, y + h / 2], right: [x, y + h / 2] };
+  const [px, py] = anchors[side] || anchors.above;
+  pointer.setAttribute('d', `M${px} ${py} L${ax} ${ay}`);
 }
 
 function enterSubstep(sub) {
