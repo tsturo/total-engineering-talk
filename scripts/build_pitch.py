@@ -219,9 +219,10 @@ def cards():
     out = ['<g id="cards">']
     for key, label, kind in CARDS:
         out.append(f'<g id="{key}" data-obj="{key}" class="card-sm {kind}" style="--hx: {X(rx)}px; --hy: {Y(ry)}px;">')
-        out.append(f'<rect x="{S(-58)}" y="{S(-36)}" width="{S(116)}" height="{S(72)}" rx="{S(5)}"/>')
-        out.append(f'<rect x="{S(-58)}" y="{S(-36)}" width="{S(9)}" height="{S(72)}" class="edge"/>')
-        out.append(f'<text y="{S(6)}">{label}</text>')
+        out.append(f'<image href="img/paper.png" x="{S(-70)}" y="{S(-42)}" width="{S(140)}" height="{S(84)}" preserveAspectRatio="none"/>')
+        out.append(f'<image href="img/jira.svg" x="{S(-44)}" y="{S(-12)}" width="{S(20)}" height="{S(20)}"/>')
+        out.append(f'<text x="{S(10)}" y="{S(6)}">{label}</text>')
+        out.append(f'<rect class="edge" x="{S(-50)}" y="{S(18)}" width="{S(100)}" height="{S(7)}" rx="{S(3)}"/>')
         out.append('</g>')
     out.append('</g>')
     return "\n".join(out)
