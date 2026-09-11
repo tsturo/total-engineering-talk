@@ -75,6 +75,28 @@
   opacity: 1;
 }
 
+#pitch .player .ai-badge {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#pitch .player .ai-badge circle {
+  fill: #E8B923;
+  stroke: #151515;
+  stroke-width: 4;
+}
+
+#pitch .player .ai-badge text {
+  font-family: var(--font-display);
+  font-size: 44px;
+  fill: #3a2a00;
+  stroke: none;
+}
+
+#pitch #players.on-ai-ring .player .ai-badge {
+  opacity: 1;
+}
+
 #pitch .player .halo.cover {
   stroke: #FFFFFF;
   stroke-dasharray: 22 14;

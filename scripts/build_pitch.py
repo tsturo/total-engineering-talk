@@ -88,6 +88,7 @@ def players():
         out.append(f'<path d="{SHORTS}" transform="scale(1.9)" class="shorts"/>')
         out.append(f'<path d="{SHIRT}" transform="scale(1.9)" class="shirt"/>')
         out.append(f'<text y="{S(4)}" class="num">{num}</text>')
+        out.append(f'<g class="ai-badge" transform="translate({S(44)} {S(-52)})"><circle r="{S(20)}"/><text y="{S(7)}">AI</text></g>')
         out.append(f'<text y="{S(90)}" class="name">{name}</text>')
         out.append(f'<text y="{S(90)}" class="role">engineer</text>')
         out.append('</g>')
