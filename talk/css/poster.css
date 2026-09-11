@@ -593,9 +593,17 @@ body.impress-mouse-timeout {
 }
 
 .ticket .key {
+  display: flex;
+  align-items: center;
+  gap: 18px;
   font-family: var(--font-display);
   font-size: 62px;
   color: var(--orange);
+}
+
+.ticket .key .jira {
+  width: 60px;
+  height: 60px;
 }
 
 .ticket .type {
@@ -606,7 +614,7 @@ body.impress-mouse-timeout {
 
 .ticket-title {
   font-family: var(--font-hand);
-  font-size: 64px;
+  font-size: 58px;
   line-height: 1.1;
   margin-top: 14px;
 }
