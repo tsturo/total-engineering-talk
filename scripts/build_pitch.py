@@ -180,6 +180,42 @@ def agents():
     return "\n".join(out)
 
 
+def agent_lines():
+    pos = {k: (x, y) for k, _, x, y in AGENTS}
+    def L(a, b, cls, dx=0, dy=0):
+        ax, ay = pos[a]; bx, by = pos[b]
+        return f'<path class="{cls}" pathLength="1" d="{P(f"M{ax+dx} {ay+dy} L{bx-dx} {by-dy}")}"/>'
+    def C(a, b, cls, bend):
+        ax, ay = pos[a]; bx, by = pos[b]
+        mx, my = (ax + bx) / 2, (ay + by) / 2 + bend
+        return f'<path class="{cls}" pathLength="1" d="{P(f"M{ax} {ay} Q{mx} {my} {bx} {by}")}"/>'
+    out = ['<g id="agent-lines">']
+    out.append('<g data-obj="al-forward" class="al">')
+    for b_ in ("a-build1", "a-build2", "a-build3"):
+        out.append(L("a-refine", b_, "fwd"))
+    for b_ in ("a-build1", "a-build2", "a-build3"):
+        out.append(L(b_, "a-review", "fwd"))
+    out.append(L("a-review", "a-ship", "fwd"))
+    out.append('</g>')
+    out.append('<g data-obj="al-cover" class="al">')
+    out.append(L("a-refine", "a-test", "cov"))
+    out.append(L("a-refine", "a-test2", "cov"))
+    out.append(L("a-test", "a-review", "cov"))
+    out.append(L("a-test2", "a-sec", "cov"))
+    out.append(L("a-build2", "a-docs", "cov"))
+    out.append(L("a-docs", "a-perf", "cov"))
+    out.append(L("a-sec", "a-review", "cov"))
+    out.append(L("a-perf", "a-review", "cov"))
+    out.append('</g>')
+    out.append('<g data-obj="al-back" class="al">')
+    out.append(C("a-review", "a-build3", "back", -140))
+    out.append(C("a-sec", "a-build1", "back", -120))
+    out.append(C("a-perf", "a-build2", "back", 120))
+    out.append('</g>')
+    out.append('</g>')
+    return "\n".join(out)
+
+
 def ball():
     chain = P(chain_path())
     return "\n".join([
@@ -223,7 +259,7 @@ def fragment():
         '<defs>',
         '<filter id="disc-shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity="0.5"/></filter>',
         '</defs>',
-        bands(), trails(), players(), kits(), agents(), ball(), labels(),
+        bands(), trails(), players(), kits(), agent_lines(), agents(), ball(), labels(),
         '</svg>',
         mirrors(),
         END,

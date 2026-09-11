@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Archivo:wght@500;700&display=swap">
   <link rel="stylesheet" href="css/poster.css?v=6">
-  <link rel="stylesheet" href="css/pitch.css?v=5">
+  <link rel="stylesheet" href="css/pitch.css?v=6">
 </head>
 <body>
 <div id="impress"
@@ -234,6 +234,32 @@
 <path d="M-27 24 L27 24 L30 58 L4 60 L0 44 L-4 60 L-30 58 Z" transform="scale(1.9)" class="shorts"/>
 <path d="M-30 -46 L-12 -54 Q0 -50 12 -54 L30 -46 L44 -28 L30 -18 L26 -24 L26 26 L-26 26 L-26 -24 L-30 -18 L-44 -28 Z" transform="scale(1.9)" class="shirt"/>
 <text y="9" class="num">9</text>
+</g>
+</g>
+<g id="agent-lines">
+<g data-obj="al-forward" class="al">
+<path class="fwd" pathLength="1" d="M760 1122 L1547 649"/>
+<path class="fwd" pathLength="1" d="M760 1122 L1547 1595"/>
+<path class="fwd" pathLength="1" d="M760 1122 L1547 1122"/>
+<path class="fwd" pathLength="1" d="M1547 649 L2705 1122"/>
+<path class="fwd" pathLength="1" d="M1547 1595 L2705 1122"/>
+<path class="fwd" pathLength="1" d="M1547 1122 L2705 1122"/>
+<path class="fwd" pathLength="1" d="M2705 1122 L3493 1122"/>
+</g>
+<g data-obj="al-cover" class="al">
+<path class="cov" pathLength="1" d="M760 1122 L2103 1122"/>
+<path class="cov" pathLength="1" d="M760 1122 L2103 514"/>
+<path class="cov" pathLength="1" d="M2103 1122 L2705 1122"/>
+<path class="cov" pathLength="1" d="M2103 514 L2705 559"/>
+<path class="cov" pathLength="1" d="M1547 1595 L2103 1730"/>
+<path class="cov" pathLength="1" d="M2103 1730 L2705 1685"/>
+<path class="cov" pathLength="1" d="M2705 559 L2705 1122"/>
+<path class="cov" pathLength="1" d="M2705 1685 L2705 1122"/>
+</g>
+<g data-obj="al-back" class="al">
+<path class="back" pathLength="1" d="M2705 1122 Q2126 807 1547 1122"/>
+<path class="back" pathLength="1" d="M2705 559 Q2126 333 1547 649"/>
+<path class="back" pathLength="1" d="M2705 1685 Q2126 1910 1547 1595"/>
 </g>
 </g>
 <g id="agents">
@@ -585,7 +611,10 @@
   <div id="s16-agents" class="step" data-x="0" data-y="-10" data-scale="2.25" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach" data-target="3:00">
     <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship" data-stagger="a-refine|a-build1|a-build2|a-test|a-review|a-ship" data-stagger-ms="500"></div>
     <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf" data-stagger="a-build3|a-test2|a-docs|a-sec|a-perf" data-stagger-ms="500"></div>
-    <div class="notes">Back on the pitch, with the shape from the notebook. Six agents. One refines the ticket, two build in parallel, one writes the tests while they build, one reviews, one ships. Grey, because they are not people. Then the coach adds players, because agents are cheap and reviewers are not. A third builder. A second tester. One writes the docs. And three reviewers with different eyes: the reviewer, security, performance. Eleven. The same number as 1974.</div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover"></div>
+    <div class="substep" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach a-refine a-build1 a-build2 a-test a-review a-ship a-build3 a-test2 a-docs a-sec a-perf al-forward al-cover al-back"></div>
+    <div class="notes">Back on the pitch, with the shape from the notebook. Six agents. Then the coach adds players, because agents are cheap and reviewers are not: a third builder, a second tester, docs, and three reviewers with different eyes: review, security, performance. Eleven, the same number as 1974. Now the plan on the grass. Forward: refine to the builders, builders to review, review to ship. Alongside: the testers write tests while the builders build, docs follows build. And the red lines: every reviewer can send it back. That is the pushback. In 1974 it was called cover.</div>
   </div>
 
   <div id="s17-poster" class="step" data-x="0" data-y="0" data-scale="3.65" data-scene="title credits xp-print pascal-print pitch photo1974 notebook coach p8 p20 p17 p2 p12 p6 p13 p3 p16 p14 p15" data-target="1:00">
