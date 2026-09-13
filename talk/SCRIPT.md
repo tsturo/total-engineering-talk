@@ -78,7 +78,7 @@ The arc in one breath: you started as someone who made a thing work, not as a la
 - Now imagine one player who could do all of it. Keep goal, defend, pass, score, run all day. All bars green. Let the room enjoy it.
 - Click, the stamp. Does not exist. Not in 1974, not now.
 - Michels never asked anyone to be this. He asked eleven specialists to be able to cover each other.
-- Keep this in mind for the next part, because it is the same answer for us.
+- Keep this in mind for the next part, because it is the same answer for us. And keep the stamp in mind for the demo at the end: we will find the one exception, in another sport.
 
 ## 12. Our four (1:30), 2 clicks
 
@@ -149,15 +149,16 @@ Each click brings a note card next to the actors, so mostly read the pitch.
 
 ## 19. The terminal, then live demo (5:00)
 
-**Thought:** you describe the shape in one sentence, and the tool writes the file and runs it.
+**Thought:** you describe the shape in one sentence, and the tool writes the file, runs the team, and changes this very presentation.
 
 - This is what it looks like in real life. Not a pitch, a terminal.
-- Switch to the terminal in `demo/`, Claude Code already open. The runbook with the exact prompt is `demo/README.md`.
-- Say what the tiny project is: a reports app, five files, three tests. Just something for the agents to look at.
-- Type the prompt: use a workflow, three reviewers with three lenses, a skeptic per finding, one writer. Do not change files.
-- Open `/workflows` and talk over the tree with the pitch. Reviewers are the three reviewers from the run. Skeptics are the pushback. The writer brings it to the touchline.
-- When the summary lands, ask Claude to show the workflow script it wrote. A JavaScript file, about 40 lines: phases, parallel, pipeline, a schema for the verdicts. The notebook drawing as code, written for this one prompt.
-- The point: you did not write the workflow. You drew the shape in a sentence. That is the coach's job now.
+- Switch to the terminal, Claude Code open in a copy of this repo. The exact prompt is in `talk/DEMO.md`.
+- The task: add one stop to this talk. Remember the stamp, "Does not exist"? Almost. Arvydas Sabonis. A 2.21 metre centre who shot three-pointers and passed like a guard. The closest thing to a total player, in another sport.
+- Type the prompt: use a workflow, a researcher, a builder, a checker, one pushback. Do not commit.
+- Open `/workflows` and talk over the tree with the pitch. The researcher is refinement. The builder builds. The checker is the reviewer who can send it back.
+- When it lands, open the poster from the copy and jump to the new stop. Sabonis is in the talk. The room just watched it happen.
+- Ask Claude to show the workflow script it wrote. A JavaScript file, about 40 lines: phases, pipeline, the pushback branch. The notebook drawing as code, written for this one prompt.
+- The point: you did not write the workflow and you did not open the editor. You drew the shape in a sentence. And it is still you who decides whether it gets merged.
 - If it fails, say so and come back to the poster. The run stop shows the same thing.
 
 ## 20. The whole poster (1:00)
