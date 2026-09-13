@@ -12,7 +12,7 @@ cd ../total-engineering-demo
 claude
 ```
 
-Optional: put a portrait render at `talk/img/sabonis.png` in that copy before the talk (same style as the 1974 player renders). Without it the builder draws a basketball jersey in SVG.
+The portrait render is already in `talk/img/sabonis.png`, so the worktree has it.
 
 Do one dry run the day before. Afterwards: `git checkout -- . && git clean -fd talk` inside the worktree.
 
