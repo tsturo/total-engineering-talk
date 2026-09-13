@@ -441,3 +441,18 @@
 
 #pitch .run.move { stroke: #E0322B; marker-end: url(#arrow-move); }
 #pitch .run.cover { stroke: #2B6BE0; marker-end: url(#arrow-cover); }
+
+#pitch .trail.chain {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 6s linear, opacity 0.3s ease;
+}
+
+#pitch .trail.chain.on {
+  stroke-dashoffset: 0;
+}
