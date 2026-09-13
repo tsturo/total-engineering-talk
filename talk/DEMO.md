@@ -19,7 +19,15 @@ Do one dry run the day before. Afterwards: `git checkout -- . && git clean -fd t
 ## The prompt (about 3 to 4 minutes)
 
 ```
-Use a workflow to add one stop to this talk, right after the "Does not exist" stamp (s11-ultra in talk/index.html): Arvydas Sabonis, a 2.21 m centre who shot threes and passed like a guard, the closest thing to a total player. Read talk/README.md first. Three agents in a pipeline: a researcher picks six real career stats for a card in the style of the footballer cards; a builder adds the step with talk/img/sabonis.png, the card, an "Almost" stamp and plain speaker notes; a checker runs node scripts/check.mjs and rejects once if other stops changed. Do not commit.
+Use a workflow to add one stop to this talk. Read talk/README.md first. Do not commit.
+
+Where: right after the "Does not exist" stamp, step s11-ultra in talk/index.html.
+Who: Arvydas Sabonis, a 2.21 m centre who shot threes and passed like a guard. The closest thing to a total player.
+
+Three agents in a pipeline:
+- researcher: six real career stats for a card in the style of the footballer cards
+- builder: the new step with talk/img/sabonis.png, the card, an "Almost" stamp, plain speaker notes
+- checker: runs node scripts/check.mjs, rejects once if any other stop changed
 ```
 
 Three agent types and a pipeline with one pushback. The orchestrator is the script Claude writes for this prompt.
