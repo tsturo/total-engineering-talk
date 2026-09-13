@@ -19,10 +19,10 @@ Do one dry run the day before. Afterwards: `git checkout -- . && git clean -fd t
 ## The prompt (about 3 to 4 minutes)
 
 ```
-Use a workflow for the task in docs/sabonis.md: a researcher, a builder, a checker, one pushback if the checker rejects. Do not commit.
+Use a workflow to add one stop to this talk, right after the "Does not exist" stamp (s11-ultra in talk/index.html): Arvydas Sabonis, a 2.21 m centre who shot threes and passed like a guard, the closest thing to a total player. Read talk/README.md first. Three agents in a pipeline: a researcher picks six real career stats for a card in the style of the footballer cards; a builder adds the step with talk/img/sabonis.png, the card, an "Almost" stamp and plain speaker notes; a checker runs node scripts/check.mjs and rejects once if other stops changed. Do not commit.
 ```
 
-Three agent types and a pipeline with one pushback. The brief with the details is `docs/sabonis.md`, open it on screen before typing the prompt if the room wants to see what the agents get. The orchestrator is the script Claude writes for this prompt.
+Three agent types and a pipeline with one pushback. The orchestrator is the script Claude writes for this prompt.
 
 ## While it runs
 
