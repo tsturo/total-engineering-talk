@@ -149,15 +149,15 @@ Each click brings a note card next to the actors, so mostly read the pitch.
 
 ## 19. The terminal, then live demo (5:00)
 
-**Thought:** the notebook drawing is a file, and the file runs.
+**Thought:** you describe the shape in one sentence, and the tool writes the file and runs it.
 
 - This is what it looks like in real life. Not a pitch, a terminal.
-- Switch to the terminal in `demo/`. The runbook is `demo/README.md`.
-- The ticket first: `tickets/ENG-142.md`. Same story as on the poster.
-- The file: `.claude/workflows/ship-ticket.js`. Five phases in the header, then the pipeline: build, test, three reviews, push back once. About 80 lines of plain JavaScript. This is the right page of the notebook.
-- Run it: `/ship-ticket`, then `/workflows` for the progress tree. Talk over the run with the pitch: orchestrator, three builders in parallel, tester, three reviewers, a pushback, ship.
-- The agent types, in one line each: the orchestrator decides the shape and returns JSON the script can branch on. Builders own disjoint files. The tester fixes its own piece. Reviewers are the same agent with three prompts: code, attacker, user. Ship runs everything and writes the hand-over, and does not merge.
-- When the summary lands: `git status`, `npm test`. Nothing committed. The ticket is at the touchline, with you.
+- Switch to the terminal in `demo/`, Claude Code already open. The runbook with the exact prompt is `demo/README.md`.
+- Say what the tiny project is: a reports app, five files, three tests. Just something for the agents to look at.
+- Type the prompt: use a workflow, three reviewers with three lenses, a skeptic per finding, one writer. Do not change files.
+- Open `/workflows` and talk over the tree with the pitch. Reviewers are the three reviewers from the run. Skeptics are the pushback. The writer brings it to the touchline.
+- When the summary lands, ask Claude to show the workflow script it wrote. A JavaScript file, about 40 lines: phases, parallel, pipeline, a schema for the verdicts. The notebook drawing as code, written for this one prompt.
+- The point: you did not write the workflow. You drew the shape in a sentence. That is the coach's job now.
 - If it fails, say so and come back to the poster. The run stop shows the same thing.
 
 ## 20. The whole poster (1:00)

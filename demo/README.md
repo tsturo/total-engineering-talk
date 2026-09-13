@@ -1,45 +1,43 @@
-# Live demo: one ticket, a team of agents
+# Live demo: one prompt, a team of agents
 
-A tiny reports app and one Jira-style ticket. The workflow in `.claude/workflows/ship-ticket.js` is the notebook drawing from the talk, as a file that runs.
+A tiny reports app (no dependencies, three tests) and one ticket. It exists only so the agents have something small to work on. You open Claude Code, type one prompt, and Claude writes and runs the workflow in front of the room.
 
 ## Before the talk
 
 ```
 cd demo
-npm test          # 3 tests pass
-git status        # clean, so the diff after the run is only the agents' work
+npm test        # 3 tests pass
 claude
 ```
 
-In Claude Code, check that `/ship-ticket` is listed (type `/ship` and look at the completions). Do one full dry run the day before; note how long it takes and what the summary looked like.
+Do one dry run the day before to see the timing. Reset afterwards with `git checkout -- . && git clean -fd`.
 
-To reset the demo after a run:
+## The prompt (about 2 minutes to run)
 
 ```
-git checkout -- . && git clean -fd src public test
+Use a workflow to review this project for bugs. Three reviewers in parallel, each with a different lens: code correctness, security, and what a user would notice. For every finding, one skeptic agent tries to refute it; keep only what survives. One last agent writes a short summary sorted by severity. Do not change any files.
 ```
 
-## The demo, about 5 minutes
+Three agent types and a pipeline: reviewers fan out, each finding goes to a skeptic as soon as its reviewer is done, a writer closes. Findings are real, the app has a few soft spots on purpose (no input validation on the report id or filters, unescaped values in the HTML table).
 
-1. **The ticket.** Open `tickets/ENG-142.md`. Same ticket as on the poster: PDF export, header, page numbers, filters, a button.
-2. **The file.** Open `.claude/workflows/ship-ticket.js`. Point at the five phases in `meta`, then at the pipeline: build, test, review, push back. This is the right page of the notebook, as code. About 80 lines, plain JavaScript, no framework.
-3. **Run it.** In Claude Code type `/ship-ticket`. Open `/workflows` and leave the progress tree on screen.
-4. **Talk over the run** with the pitch. Which agent is playing now, who is waiting, which piece got pushed back. `/workflows` shows agents per phase, tokens and time.
-5. **The result.** The summary comes back to the terminal, to you. Show `git status` and `npm test`. Nothing was committed. The ticket is at the touchline.
+## While it runs
 
-## What to say about the pieces
+- `/workflows` shows the progress tree: phases, agents, tokens, time. Leave it on screen.
+- Talk over it with the pitch: reviewers are the three reviewers from the run, skeptics are the pushback, the writer is the hand-over to the touchline.
 
-- **The orchestrator** is the script plus its first agent. It reads the ticket and decides the shape: how many pieces, which files each one owns. Nothing is fixed in advance; three pieces today, two or five for another ticket.
-- **Builders** are plain agents, one per piece, in parallel. They own disjoint files, so they never collide.
-- **Tester** runs the suite per piece and fixes its own piece if red.
-- **Reviewers** are three agents with three prompts: code quality, attacker, user. Same agent type, different lens. One of them saying no is enough to push the piece back to its builder once.
-- **Ship** is one last agent that runs everything and writes the hand-over. It does not merge. You do.
-- **Structured output.** The orchestrator and the reviewers return JSON that matches a schema, so the script can branch on it. That is what makes the pushback loop deterministic code instead of a hope.
+## After it lands
+
+- Ask: `show me the workflow script you wrote`. Claude opens the JavaScript file it generated and saved under `~/.claude/projects/<session>/workflows/`. Point at `meta.phases`, `parallel`, `pipeline`, and the schema: the notebook drawing as code, about 40 lines, written by the tool for this one prompt.
+- In `/workflows`, `s` saves that script as a reusable slash command. Say that a team keeps these in `.claude/workflows/` next to the code.
+
+## If there is time: the build variant (5 to 10 minutes)
+
+```
+Use a workflow to implement tickets/ENG-142.md. One planner splits it into pieces that touch different files, one builder per piece in parallel, one tester per piece, then three reviewers per piece: code, security, product. If a reviewer rejects a piece, send it back to its builder once. Finish with a summary for me. Do not commit.
+```
+
+Same shape as the run stop on the poster. Only start it if the room has ten minutes; otherwise show the prompt and say what it would do.
 
 ## If it goes wrong
 
-Say so. The run stop on the poster shows the same pipeline, so go back to the poster and finish there. If the run is only slow, keep talking over the pitch, then show the summary when it lands.
-
-## Where the script for an ad hoc run lives
-
-When you ask Claude Code in plain words to orchestrate something, it writes a script like this one on the fly and saves it under `~/.claude/projects/<session>/workflows/`. Pressing `s` in `/workflows` saves that script as a reusable command. That is how this file started.
+Say so and go back to the poster. The run stop shows the same pipeline.
