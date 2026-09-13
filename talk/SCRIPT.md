@@ -152,9 +152,9 @@ Each click brings a note card next to the actors, so mostly read the pitch.
 **Thought:** you describe the shape in one sentence, and the tool writes the file, runs the team, and changes this very presentation.
 
 - This is what it looks like in real life. Not a pitch, a terminal.
-- Switch to the terminal, Claude Code open in a copy of this repo. The exact prompt is in `talk/DEMO.md`.
+- Switch to the terminal, Claude Code open in a copy of this repo. The prompt is one line, in `talk/DEMO.md`; the brief the agents read is `docs/sabonis.md`.
 - The task: add one stop to this talk. Remember the stamp, "Does not exist"? Almost. Arvydas Sabonis. A 2.21 metre centre who shot three-pointers and passed like a guard. The closest thing to a total player, in another sport.
-- Type the prompt: use a workflow, a researcher, a builder, a checker, one pushback. Do not commit.
+- Type the prompt: use a workflow for the task in the brief, a researcher, a builder, a checker, one pushback. Do not commit.
 - Open `/workflows` and talk over the tree with the pitch. The researcher is refinement. The builder builds. The checker is the reviewer who can send it back.
 - When it lands, open the poster from the copy and jump to the new stop. Sabonis is in the talk. The room just watched it happen.
 - Ask Claude to show the workflow script it wrote. A JavaScript file, about 40 lines: phases, pipeline, the pushback branch. The notebook drawing as code, written for this one prompt.

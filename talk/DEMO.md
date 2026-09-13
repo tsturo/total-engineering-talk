@@ -19,12 +19,10 @@ Do one dry run the day before. Afterwards: `git checkout -- . && git clean -fd t
 ## The prompt (about 3 to 4 minutes)
 
 ```
-Use a workflow to add one stop to this presentation, right after the "Does not exist" stamp (step s11-ultra in talk/index.html): Arvydas Sabonis, the closest thing to a total player, in another sport. A 2.21 m centre who shot three-pointers and passed like a guard. Read talk/README.md first, the Editing section explains how stops and scenes work.
-
-Three agents in a pipeline. A researcher collects his real career facts and picks six stats for a card in the same style as the footballer cards in talk/index.html (class card, six bars, hi/mid/lo colours), with a one-line source note. A builder adds the stop: a new step after s11-ultra with camera data, the card, a portrait from talk/img/sabonis.png if it exists or a basketball jersey number 11 drawn in SVG, a small "Almost" stamp, and speaker notes in plain language, no slogans. A checker runs node scripts/check.mjs and confirms the new stop appears and no other stop's scene changed. If the checker rejects it, send it back to the builder once. Finish with a summary of what changed. Do not commit.
+Use a workflow for the task in docs/sabonis.md: a researcher, a builder, a checker, one pushback if the checker rejects. Do not commit.
 ```
 
-Three agent types (researcher, builder, checker) and a pipeline with one pushback. The orchestrator is the script Claude writes for this prompt.
+Three agent types and a pipeline with one pushback. The brief with the details is `docs/sabonis.md`, open it on screen before typing the prompt if the room wants to see what the agents get. The orchestrator is the script Claude writes for this prompt.
 
 ## While it runs
 
