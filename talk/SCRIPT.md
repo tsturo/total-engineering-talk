@@ -152,8 +152,12 @@ Each click brings a note card next to the actors, so mostly read the pitch.
 **Thought:** the notebook drawing is a file, and the file runs.
 
 - This is what it looks like in real life. Not a pitch, a terminal.
-- Switch to the live terminal. Show the workflow file first, so the room recognises the shape from the notebook. Then the same ticket, then run it.
-- Talk over the waits with the pitch: which agent is playing now, who is covering.
+- Switch to the terminal in `demo/`. The runbook is `demo/README.md`.
+- The ticket first: `tickets/ENG-142.md`. Same story as on the poster.
+- The file: `.claude/workflows/ship-ticket.js`. Five phases in the header, then the pipeline: build, test, three reviews, push back once. About 80 lines of plain JavaScript. This is the right page of the notebook.
+- Run it: `/ship-ticket`, then `/workflows` for the progress tree. Talk over the run with the pitch: orchestrator, three builders in parallel, tester, three reviewers, a pushback, ship.
+- The agent types, in one line each: the orchestrator decides the shape and returns JSON the script can branch on. Builders own disjoint files. The tester fixes its own piece. Reviewers are the same agent with three prompts: code, attacker, user. Ship runs everything and writes the hand-over, and does not merge.
+- When the summary lands: `git status`, `npm test`. Nothing committed. The ticket is at the touchline, with you.
 - If it fails, say so and come back to the poster. The run stop shows the same thing.
 
 ## 20. The whole poster (1:00)

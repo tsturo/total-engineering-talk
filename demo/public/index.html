@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Reports</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 40px; }
+  label { display: block; margin: 8px 0; }
+  iframe { width: 100%; height: 320px; border: 1px solid #ccc; margin-top: 16px; }
+</style>
+<h1>Reports</h1>
+<label>Report
+  <select id="report">
+    <option value="sales">Sales by region</option>
+    <option value="headcount">Headcount by team</option>
+  </select>
+</label>
+<label>Quarter
+  <select id="quarter">
+    <option value="">All</option>
+    <option>Q1</option>
+    <option>Q2</option>
+  </select>
+</label>
+<iframe id="view"></iframe>
+<script>
+  const report = document.getElementById('report');
+  const quarter = document.getElementById('quarter');
+  const view = document.getElementById('view');
+  function load() {
+    const params = quarter.value ? `?Quarter=${quarter.value}` : '';
+    view.src = `/reports/${report.value}${params}`;
+  }
+  report.addEventListener('change', load);
+  quarter.addEventListener('change', load);
+  load();
+</script>
